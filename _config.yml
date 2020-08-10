@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : dark # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -101,26 +101,26 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-       url: "mailto:rpeverati@fit.edu"
+      # url: "mailto:rpeverati@fit.edu"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-       url: "https://peverati.github.io"
+      # url: "https://peverati.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-       url: "https://twitter.com/peverati_res"
+      # url: "https://twitter.com/peverati_res"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-       url: "https://github.com/peverati"
+      # url: "https://github.com/peverati"
 
 # Site Footer
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-       url: "https://twitter.com/peverati_res"
+      # url: "https://twitter.com/peverati_res"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-       url: "https://peverati.github.io"
+      # url: "https://peverati.github.io"
 
 # Reading Files
 include:
