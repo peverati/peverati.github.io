@@ -19,7 +19,13 @@ We are focused primarily in developing affordable computational methods with goo
 
 The rationale for the two lines presented above is the necessity to improve DFT for calculations that include transition metals. In this context, methods that scale better are important to expand our calculations to molecules of biological interests, while more accurate methods are necessary to treat correctly the multi-reference character (strong correlation) of most transition metals involved in such molecules. 
 
-Applications are vast in scope and important in nature.
+# Applications 
+
+- **Chiral synthesis of organic compounds** in collaboration with [Dr. Norito Takenaka](https://www.fit.edu/faculty-profiles/6/norito-takenaka/). This project was recently financed through a NIH R15 grant.  ![](https://www.nih.gov/sites/default/files/styles/floated_media_breakpoint-large/public/generic/nih-turning-discovery-health.jpg?itok=8ZozpE1Q&timestamp=1479330665){: width="200"}
+
+- **Anti-doping science** in collaboration with [Dr. Chris Chouinard](https://www.fit.edu/faculty-profiles/2/christopher-chouinard/)
+
+- **Bio-organic chemistry**, study of the uncaging mechanism of molecular photo-responsive caging compound to deliver neurotransmitter to the brain. In collaboration with [Dr. Nasri Nesnas](https://research.fit.edu/nesnas/)
 
 # Philosophy of Science
 A recent interest of our group is the philosophy of science and education in chemistry. On this line of research, we focus on three important areas of the philosophy of chemistry:

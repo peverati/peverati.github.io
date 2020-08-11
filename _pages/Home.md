@@ -9,6 +9,9 @@ header:
   overlay_filter: 0.5  
 ---
 
+> ## Announcement: 
+> We have an open position for a __fully supported PhD student__ to work in our group at Florida Tech. We're looking for students interested in DFT develooment and applications to chiral synthesis. The application process is open to everyone and particularly welcome from international students, women, minorities, and other underrepresented categories. We're a diverse group and we want to keep it that way!
+
 Research in our group is in the area of electronic structure theory and consists of two interconnected processes:
 
 - We teach chemistry to the computer, by designing and implementing new theories into algorithms and computer programs.
