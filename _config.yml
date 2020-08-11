@@ -111,6 +111,15 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/peverati"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=2eAYSvgAAAAJ&hl=en"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0001-7774-9923"
+    - label: "ResearchGate"
+      icon: "fab fa-fw fa-researchgate"
+      url: "https://www.researchgate.net/profile/Roberto_Peverati"
 
 # Site Footer
 footer:
@@ -121,6 +130,15 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/peverati"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=2eAYSvgAAAAJ&hl=en"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0001-7774-9923"
+    - label: "ResearchGate"
+      icon: "fab fa-fw fa-researchgate"
+      url: "https://www.researchgate.net/profile/Roberto_Peverati"      
 
 # Reading Files
 include:

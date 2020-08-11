@@ -18,8 +18,8 @@ Applications are in every area of chemistry and include: studying reaction mecha
 
 For more information on what we are currently working on, visit the [Research page](/Research/) on this website.
 
+![](assets/images/TheoCompChem.png){: .center-image width="600"}
 
-:-------------------------------------:|:-----------------------------------------:
-<img src="assets/images/TheoCompChem.jpeg" width="600">  |  <a class="twitter-timeline" data-width="400" data-tweet-limit="1" data-theme="dark" href="https://twitter.com/peverati_res?ref_src=twsrc%5Etfw">Tweets by peverati_res</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-width="400" data-tweet-limit="1" data-theme="dark" href="https://twitter.com/peverati_res?ref_src=twsrc%5Etfw">Tweets by peverati_res</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
