@@ -9,6 +9,8 @@ header:
   overlay_filter: 0.5  
 ---
 
+![](assets/images/PVRT_logo_white.png){: .align-center width="400"}
+
 > ## Announcement: 
 > We have an open position for a __fully supported PhD student__ to work in our group at Florida Tech. We're looking for students interested in DFT develooment and applications to chiral synthesis. The application process is open to everyone and particularly welcome from international students, women, minorities, and other underrepresented categories. We're a diverse group and we want to keep it that way!
 
@@ -21,8 +23,6 @@ Applications are in every area of chemistry and include: studying reaction mecha
 
 For more information on what we are currently working on, visit the [Research page](/Research/) on this website.
 
-![](assets/images/TheoCompChem.png){: .center-image width="600"}
-
-<a class="twitter-timeline" data-width="400" data-tweet-limit="1" data-theme="dark" href="https://twitter.com/peverati_res?ref_src=twsrc%5Etfw">Tweets by peverati_res</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+![](assets/images/TheoCompChem.png){: .align-left width="500"} <a class="twitter-timeline" data-width="400" data-tweet-limit="1" data-theme="dark" href="https://twitter.com/peverati_res?ref_src=twsrc%5Etfw">Tweets by peverati_res</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 

@@ -10,6 +10,7 @@ header:
   overlay_filter: 0.5  
 ---
 
+# Roberto Peverati, Dr. sc. nat.
 ## Contacts
 My office is #334 in the Olin Physical Science Building (OPS)
 (Located next to our Lab in OPS 333)
