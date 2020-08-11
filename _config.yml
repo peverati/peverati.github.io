@@ -52,8 +52,8 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search_full_content      : true # true, false (default)
+search_provider          : lunr # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -120,7 +120,7 @@ footer:
       url: "https://twitter.com/peverati_res"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://peverati.github.io"
+      url: "https://github.com/peverati"
 
 # Reading Files
 include:
