@@ -4,6 +4,10 @@ layout: archive
 permalink: /Software/
 author_profile: true
 comments: false
+classes: wide
+header:
+  overlay_image: /assets/images/BG.png
+  overlay_filter: 0.5  
 ---
 
 Our software and databases are released under GNU-GPL license on github:

@@ -4,13 +4,17 @@ layout: archive
 permalink: /About/
 author_profile: true
 comments: false
+classes: wide
+header:
+  overlay_image: /assets/images/BG.png
+  overlay_filter: 0.5  
 ---
 
 ## Contacts
 My office is #334 in the Olin Physical Science Building (OPS)
 (Located next to our Lab in OPS 333)
 
-**Office hours:** M/F 2-4PM.
+**Office hours:** M&F 2-4PM.
 
 **Phone:** (321)674-7735
 

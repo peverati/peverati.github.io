@@ -1,9 +1,13 @@
 ---
-title:  "Group"
+title:  "PVRT Research Group"
 layout: archive
 permalink: /Group/
 author_profile: true
 comments: false
+classes: wide
+header:
+  overlay_image: /assets/images/BG.png
+  overlay_filter: 0.5  
 ---
 
 ## People:
@@ -20,16 +24,16 @@ We DO NOT have open positions for post-docs at the moment.
 ### Group Cluster (Carbon):
 TOTAL: 104 cores, 160GB RAM, in 4 nodes and 1 headnode:
 - headnode: AMD Ryzen 7 2700x, 8c, 16GB RAM, Purchased: Aug 2018
-- node1: 2xAMD Epyc 7281, Total: 32c, 64GB RAM, Purchased: Aug 2018
-- node2: 2xAMD Epyc 7281, Total: 32c, 64GB RAM, Purchased: Aug 2018
-- nodeA: AMD Ryzen Threadripper 1950x, 16c, 16GB RAM, Built: Dec 2018
-- nodeB: AMD Ryzen Threadripper 1950x, 16c, 16GB RAM, Built: Dec 2018
+- *node1*: 2xAMD Epyc 7281, Total: 32c, 64GB RAM, Purchased: Aug 2018
+- *node2*: 2xAMD Epyc 7281, Total: 32c, 64GB RAM, Purchased: Aug 2018
+- *nodeA*: AMD Ryzen Threadripper 1950x, 16c, 16GB RAM, Built: Dec 2018
+- *nodeB*: AMD Ryzen Threadripper 1950x, 16c, 16GB RAM, Built: Dec 2018
 
 ### Workstations:
-- Hydrogen: 2x Intel 5630v3, Total: 20c, 64GB RAM, Purchased: Sep 2016
-- Helium: 2x Intel 5620v3, Total: 16c, 32GB RAM, Purchased: Oct 2016
-- Lithium: 2x Intel 5620v3, Total: 16c, 32GB RAM, Purchased: Jan 2017
-- Beryllium: AMD Ryzen Threadripper 1950x, 16c, 32GB RAM, Built: Jun 2018
+- *Hydrogen*: 2x Intel 5630v3, Total: 20c, 64GB RAM, Purchased: Sep 2016
+- *Helium*: 2x Intel 5620v3, Total: 16c, 32GB RAM, Purchased: Oct 2016
+- *Lithium*: 2x Intel 5620v3, Total: 16c, 32GB RAM, Purchased: Jan 2017
+- *Beryllium*: AMD Ryzen Threadripper 1950x, 16c, 32GB RAM, Built: Jun 2018
 
 If you are a group member that has access to any of these machines, please use this internal document to record your usage.
 Note: In all our machines hyperthreading is turned OFF by default (our own benchmarks indicate that is convenient to do so).
