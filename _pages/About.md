@@ -17,7 +17,7 @@ My office is #334 in the Olin Physical Science Building (OPS)
 
 **Office hours:** M&F 2-4PM.
 
-**Phone:** (321)674-7735
+**Phone:** (321) 674-7735
 
 **e-mail:** [rpeverati@fit.edu](mailto:rpeverati@fit.edu)
 

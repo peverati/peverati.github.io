@@ -13,8 +13,8 @@ header:
 
 # PVRT Research Lab:
 
-1. Peverati, R.; "Fitting elephants in the density functionals zoo: Statistical criteria for the evaluation of density functional theory methods as a suitable replacement for counting parameters
-" Int. J. Quant. Chem, 2020, in press. [\[LINK - OPEN ACCESS\]](https://onlinelibrary.wiley.com/doi/full/10.1002/qua.26379){:target="_blank"} [\[Github Repo\]](https://github.com/peverati/Fitting_Elephants_in_the_DFT_Zoo_IJQC_2020){:target="_blank"}
+1. Maddox, S.W.; Olsen, S.S.H; Velosa, D.C.; Burkus-Matesevac, A.; Peverati, R.; Chouinard, C.D.; "Improved Identification of Isomeric Steroids Using the Paternò-Büchi Reaction with Ion Mobility-Mass Spectrometry" J. Am. Soc. Mass Spec. 2020, in press [\[LINK\]](https://pubs.acs.org/doi/10.1021/jasms.0c00215)
+1. Peverati, R.; "Fitting elephants in the density functionals zoo: Statistical criteria for the evaluation of density functional theory methods as a suitable replacement for counting parameters" Int. J. Quant. Chem, 2020, in press. [\[LINK - OPEN ACCESS\]](https://onlinelibrary.wiley.com/doi/full/10.1002/qua.26379){:target="_blank"} [\[Github Repo\]](https://github.com/peverati/Fitting_Elephants_in_the_DFT_Zoo_IJQC_2020){:target="_blank"}
 1. Morgante, P.; Peverati, R; "The devil in the details: A tutorial review on some undervalued aspects of density functional theory calculations", Int. J. Quant. Chem, 2020, in press, [\[LINK - OPEN ACCESS\]](https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.26332){:target="_blank"} [\[Github Repo\]](https://github.com/peverati/Devil_DFT_Tutorial_IJQC_2020){:target="_blank"}
 1. Morgante P.; Burjor C.; Chouinard C.D.; Peverati, R. Takenaka, N; "Synthesis of electrophilic N-heterocyclic carbenes based on azahelicene", Tetrahedron Lett., 2020, 61, 152143. [\[LINK\]](https://www.sciencedirect.com/science/article/abs/pii/S0040403920306031){:target="_blank"}
 1. Aprà, E. Bylaska, E. J., de Jong, W. A., Govind, N., Kowalski,  K., Straatsma, T. P., et al.; "NWChem: Past, present, and future", J. Chem. Phys. 2020, 152, 184102. [\[LINK\]](https://aip.scitation.org/doi/abs/10.1063/5.0004997){:target="_blank"} [ArXiv preprint](https://arxiv.org/pdf/2004.12023.pdf){:target="_blank"}
@@ -24,7 +24,7 @@ header:
 1. Morgante, P.; Peverati, R.; “ACCDB: A Collection of Computational-chemistry DataBases” J. Comput. Chem. 2019, 40, 839-848. [\[LINK\]](https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.25761){:target="_blank"} [\[Github Repo\]](https://github.com/peverati/ACCDB){:target="_blank"}
 1. Konkov, V.; Peverati, R.; “QMC-SW: A Simple Workflow for Quantum Monte Carlo Calculations in Chemistry” SoftwareX, 2019, 9, 7-14. [\[LINK - OPEN ACCESS\]](https://www.sciencedirect.com/science/article/pii/S2352711018302218){:target="_blank"} [\[Github Repo\]](https://github.com/peverati/QMC-SW){:target="_blank"}
 1. Reep, C.; Morgante, P.; Peverati, R.; Takenaka, N., “Axial-Chiral Biisoquinoline N,N’-Dioxides Bearing Polar Aromatic C-H Bonds as Catalysts in Sakurai-Hosomi-Denmark Allylation” Org. Lett. 2018, 20, 5757-5761. [\[LINK\]](https://pubs.acs.org/doi/abs/10.1021/acs.orglett.8b02457){:target="_blank"}
-{: reversed="reversed" start="38"}
+{: reversed="reversed" start="39"}
 
 
 # Previous Work:
