@@ -21,6 +21,9 @@ Pierpaolo Morgante - [email](mailto:pmorgante2017@go.fit.edu)
 
 We DO NOT have open positions for post-docs at the moment.
 
+## Undergraduate Students: 
+Gregory Aldrich - [email](mailto:galdrich2018@my.fit.edu)
+
 # Machines:
 ## Group Cluster (Carbon):
 TOTAL: 104 cores, 160GB RAM, in 4 nodes and 1 headnode:
