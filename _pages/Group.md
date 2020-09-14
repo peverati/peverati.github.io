@@ -11,15 +11,17 @@ header:
 ---
 
 # People:
+
+> We DO have open positions for both graduate and undergraduate students. If you are a prospective student with a strong background in computational/theoretical chemistry interested in joining the PhD program in chemistry at Florida Tech, feel free to contact Dr. Peverati for details. Also, if you are a local undergraduate in search of a research project, and are interested in both chemistry and programming, please come visit us in OPS 333.
+
+> We DO NOT have open positions for post-docs at the moment.
+
+
 ## Group Leader: 
 Dr. Roberto Peverati - [about](/About/)
 
 ## Graduate Students: 
 Pierpaolo Morgante - [email](mailto:pmorgante2017@go.fit.edu)
-
-> We DO have open positions for both graduate and undergraduate students. If you are a prospective student with a strong background in computational/theoretical chemistry interested in joining the PhD program in chemistry at Florida Tech, feel free to contact Dr. Peverati for details. Also, if you are a local undergraduate in search of a research project, and are interested in both chemistry and programming, please come visit us in OPS 333.
-
-We DO NOT have open positions for post-docs at the moment.
 
 ## Undergraduate Students: 
 Gregory Aldrich - [email](mailto:galdrich2018@my.fit.edu)
