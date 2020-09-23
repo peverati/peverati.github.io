@@ -13,6 +13,8 @@ header:
 
 > ## Announcement: 
 > We have an open position for a __fully supported PhD student__ to work in our group at Florida Tech. We're looking for students interested in DFT development and applications to chiral synthesis. The application process is open to everyone and particularly welcome from international students, women, minorities, and other underrepresented categories. We're a diverse group and we want to keep it that way!
+> 
+> **TO APPLY SEND A CV TO DR. PEVERATI BY CLICKING [>=- HERE -=<](mailto:rpeverati@fit.edu?subject=PhD applicant)**
 
 Research in our group is in the area of electronic structure theory and consists of two interconnected processes:
 
