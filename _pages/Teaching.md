@@ -16,6 +16,7 @@ header:
 The textbook for the physical chemistry 1 course is available [HERE](https://peverati.github.io/pchem1)
 
 ## P-Chem 2 (CHM 3002):
+The textbook for the physical chemistry 2 course is available [HERE](https://peverati.github.io/pchem2)
 
 ## Contacts
 My office is #334 in the Olin Physical Science Building (OPS)
