@@ -15,7 +15,7 @@ header:
 # PVRT Research Lab:
 
 1. Morgante, P.; Guruge, C.; Ouedraogo, Y.P.; Nesnas, N.; Peverati, R.; "Competition between cyclization and unusual Norrish type I and type II nitro-acyl migration pathways in the photouncaging of 1-acyl-7-nitroindoline revealed by computations", Sci. Rep. 2021, 11, 1396 [![DOI:10.1038/s41598-020-79701-4](https://img.shields.io/badge/DOI-10.1038/s41598.020.79701.4-green)](https://doi.org/10.1038/s41598-020-79701-4){:target="_blank"}
-[![github](https://img.shields.io/badge/github-lightgrey?style=flat&logo=github)](https://github.com/peverati/MDNI-MNI_Uncaging_Mechanism){:target="_blank"}
+[![github](https://img.shields.io/badge/github-lightgrey?style=flat&logo=github)](https://github.com/peverati/MDNI-MNI_Uncaging_Mechanism){:target="_blank"} 
 1. Morgante, P.; Peverati, R.; "CLB18: A new structural database with unusual carbon–carbon long bonds", Chem. Phys. Lett. 2021, 765, 138281 [![DOI:10.1016/j.cplett.2020.138281](https://img.shields.io/badge/DOI-10.1016/j.cplett.2020.138281-990033)](https://doi.org/10.1016/j.cplett.2020.138281){:target="_blank"}
 [![ChemRxiv:preprint](https://img.shields.io/badge/ChemRxiv-preprint-green)](https://chemrxiv.org/articles/preprint/CLB18_A_New_Structural_Database_with_Unusual_Carbon_Carbon_Long_Bonds/13225118){:target="_blank"}
 [![github](https://img.shields.io/badge/github-lightgrey?style=flat&logo=github)](https://github.com/peverati/CLB18){:target="_blank"}
