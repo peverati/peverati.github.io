@@ -14,6 +14,8 @@ header:
 
 # PVRT Research Lab:
 
+1. Morgante, P.; Guruge, C.; Ouedraogo, Y.P.; Nesnas, N.; Peverati, R.; "Competition between cyclization and unusual Norrish type I and type II nitro-acyl migration pathways in the photouncaging of 1-acyl-7-nitroindoline revealed by computations", Sci. Rep. 2021, 11, 1396 [![DOI:10.1038/s41598-020-79701-4](https://img.shields.io/badge/DOI-10.1038/s41598.020.79701.4-green)](https://doi.org/10.1038/s41598-020-79701-4){:target="_blank"}
+[![github](https://github.com/peverati/MDNI-MNI_Uncaging_Mechanism){:target="_blank"}
 1. Morgante, P.; Peverati, R.; "CLB18: A new structural database with unusual carbon–carbon long bonds", Chem. Phys. Lett. 2021, 765, 138281 [![DOI:10.1016/j.cplett.2020.138281](https://img.shields.io/badge/DOI-10.1016/j.cplett.2020.138281-990033)](https://doi.org/10.1016/j.cplett.2020.138281){:target="_blank"}
 [![ChemRxiv:preprint](https://img.shields.io/badge/ChemRxiv-preprint-green)](https://chemrxiv.org/articles/preprint/CLB18_A_New_Structural_Database_with_Unusual_Carbon_Carbon_Long_Bonds/13225118){:target="_blank"}
 [![github](https://img.shields.io/badge/github-lightgrey?style=flat&logo=github)](https://github.com/peverati/CLB18){:target="_blank"}
@@ -29,7 +31,7 @@ header:
 1. Morgante, P.; Peverati, R.; “ACCDB: A Collection of Computational-chemistry DataBases” J. Comput. Chem. 2019, 40, 839-848. [![DOI:10.1002/jcc.25761](https://img.shields.io/badge/DOI-10.1002/jcc.25761-990033)](https://doi.org/10.1002/jcc.25761){:target="_blank"} [![github](https://img.shields.io/badge/github-lightgrey?style=flat&logo=github)](https://github.com/peverati/ACCDB){:target="_blank"}
 1. Konkov, V.; Peverati, R.; “QMC-SW: A Simple Workflow for Quantum Monte Carlo Calculations in Chemistry” SoftwareX, 2019, 9, 7-14. [![DOI:10.1016/j.softx.2018.11.001](https://img.shields.io/badge/DOI-10.1016/j.softx.2018.11.001-green)](https://doi.org/10.1016/j.softx.2018.11.001){:target="_blank"} [![github](https://img.shields.io/badge/github-lightgrey?style=flat&logo=github)](https://github.com/peverati/QMC-SW){:target="_blank"}
 1. Reep, C.; Morgante, P.; Peverati, R.; Takenaka, N., “Axial-Chiral Biisoquinoline N,N’-Dioxides Bearing Polar Aromatic C-H Bonds as Catalysts in Sakurai-Hosomi-Denmark Allylation” Org. Lett. 2018, 20, 5757-5761. [![DOI:10.1021/acs.orglett.8b02457](https://img.shields.io/badge/DOI-10.1021/acs.orglett.8b02457-990033)](https://doi.org/10.1021/acs.orglett.8b02457){:target="_blank"}
-{: reversed="reversed" start="40"}
+{: reversed="reversed" start="41"}
 
 
 # Previous Work:
