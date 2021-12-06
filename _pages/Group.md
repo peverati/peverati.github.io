@@ -21,10 +21,15 @@ header:
 Dr. Roberto Peverati - [about](/About/)
 
 ## Graduate Students: 
-Pierpaolo Morgante - [email](mailto:pmorgante2017@go.fit.edu)
+Coty Deluca - [email](mailto:cdeluca2019@my.fit.edu)
+Tegla Jones - [email](mailto:tjones2018@my.fit.edu)
+Antonella Ambrosini - [email](aambrosini2021@my.fit.edu)
 
 ## Undergraduate Students: 
 Gregory Aldrich - [email](mailto:galdrich2018@my.fit.edu)
+
+## Alumni:
+Pierpaolo Morgante - currently postdoc @ University of Buffalo [email](mailto:pmorgante2017@go.fit.edu)
 
 # Machines:
 ## Group Cluster (Carbon):
