@@ -22,7 +22,9 @@ Dr. Roberto Peverati - [about](/About/)
 
 ## Graduate Students: 
 Coty Deluca - [email](mailto:cdeluca2019@my.fit.edu)
+
 Tegla Jones - [email](mailto:tjones2018@my.fit.edu)
+
 Antonella Ambrosini - [email](aambrosini2021@my.fit.edu)
 
 ## Undergraduate Students: 

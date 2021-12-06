@@ -10,7 +10,9 @@ header:
   overlay_filter: 0.5  
 ---
 
-[![Google: Scholar](https://img.shields.io/badge/Google-Scholar-blue?style=for-the-badge&logo=google-scholar)](https://scholar.google.com/citations?user=2eAYSvgAAAAJ&hl=en){:target="_blank"}
+Here's a link to my Google Scholar profile: [![Google: Scholar](https://img.shields.io/badge/Google-Scholar-blue?style=for-the-badge&logo=google-scholar)](https://scholar.google.com/citations?user=2eAYSvgAAAAJ&hl=en){:target="_blank"}
+
+And below is a list of all publications, in reverse chronological order (most recent at the top). Notice that you can click on the badge to go directly to the DOI on the publisher's website. A green badge means that the article is available free of charge, either as an open-access publication or a pre-print. For red badges, I don't have the ability to link to a pdf because the Journal has the publishing rights (the good news is that most of our articles are green-badges, we try everything that we can to make this happen.) The github badge, when available, will bring you to the supporting information and additional material (e.g. codes, databases, etc.)
 
 # PVRT Research Lab:
 
