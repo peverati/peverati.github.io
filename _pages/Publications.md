@@ -16,6 +16,7 @@ And below is a list of all publications, in reverse chronological order (most re
 
 # PVRT Research Lab:
 
+1. Wehmschulte, R.J.; Bayliss, B.; Reed, S.; Wesenberg, C.; Morgante, P.; Peverati, R.; Neal, S.; Chouinard, C.D.; Tolosa, D.; Powell, D.R. "Zinc Ammonio-dodecaborates: Synthesis, Lewis Acid Strength, and Reactivity" Inorg. Chem. 2022, 61, 7032. [![DOI:10.1021/acs.inorgchem.2c00464](https://img.shields.io/badge/DOI-10.1021/acs.inorgchem.2c00464-990033)](https://doi.org/10.1021/acs.inorgchem.2c00464){:target="_blank"}
 1. Morgante, P.; Deluca, C.; Jones, T.E.; Aldrich, G.J.; Takenaka, N.; Peverati, R. "Steps toward Rationalization of the Enantiomeric Excess of the Sakurai–Hosomi–Denmark Allylation Catalyzed by Biisoquinoline N,N’-Dioxides Using Computations" Catalysts 2021, 11, 1487. [![DOI:10.3390/catal11121487](https://img.shields.io/badge/DOI-10.3390/catal11121487-green)](https://doi.org/10.3390/catal11121487)[![github](https://img.shields.io/badge/github-lightgrey?style=flat&logo=github)](https://github.com/peverati/biisoquinoline_catalysts_2021){:target="_blank"}
 1. Sun, S.; Xu, C.; Jarvis, J.; Nader, P.; Naumann, B.; Soliven, A.; Peverati, R.; Takenaka, N. "Evaluation of 3,3'-Triazolyl Biisoquinoline N,N'-Dioxide Catalysts for Asymmetric Hydrosilylation of Hydrazones with Trichlorosilane" Catalysts 2021, 11, 1103. [![DOI:10.3390/catal11091103](https://img.shields.io/badge/DOI-10.3390/catal11091103-green)](https://doi.org/10.3390/catal11091103){:target="_blank"}
 1. Epifanovsky, E.; Gilbert, A. T. B.; Feng, X.; Lee, J.; Mao, Y.; Mardirossian, N.; et al. "Software for the Frontiers of Quantum Chemistry: An Overview of Developments in the Q-Chem 5 Package" J. Chem. Phys. 2021, 155 (8), 084801. [![DOI:10.1016/j.tetlet.2021.153338](https://img.shields.io/badge/DOI-10.1063/5.0055522-990033)](https://doi.org/10.1063/5.0055522){:target="_blank"}
@@ -37,7 +38,7 @@ And below is a list of all publications, in reverse chronological order (most re
 1. Morgante, P.; Peverati, R.; “ACCDB: A Collection of Computational-chemistry DataBases” J. Comput. Chem. 2019, 40, 839-848. [![DOI:10.1002/jcc.25761](https://img.shields.io/badge/DOI-10.1002/jcc.25761-990033)](https://doi.org/10.1002/jcc.25761){:target="_blank"} [![github](https://img.shields.io/badge/github-lightgrey?style=flat&logo=github)](https://github.com/peverati/ACCDB){:target="_blank"}
 1. Konkov, V.; Peverati, R.; “QMC-SW: A Simple Workflow for Quantum Monte Carlo Calculations in Chemistry” SoftwareX, 2019, 9, 7-14. [![DOI:10.1016/j.softx.2018.11.001](https://img.shields.io/badge/DOI-10.1016/j.softx.2018.11.001-green)](https://doi.org/10.1016/j.softx.2018.11.001){:target="_blank"} [![github](https://img.shields.io/badge/github-lightgrey?style=flat&logo=github)](https://github.com/peverati/QMC-SW){:target="_blank"}
 1. Reep, C.; Morgante, P.; Peverati, R.; Takenaka, N., “Axial-Chiral Biisoquinoline N,N’-Dioxides Bearing Polar Aromatic C-H Bonds as Catalysts in Sakurai-Hosomi-Denmark Allylation” Org. Lett. 2018, 20, 5757-5761. [![DOI:10.1021/acs.orglett.8b02457](https://img.shields.io/badge/DOI-10.1021/acs.orglett.8b02457-990033)](https://doi.org/10.1021/acs.orglett.8b02457){:target="_blank"}
-{: reversed="reversed" start="45"}
+{: reversed="reversed" start="46"}
 
 
 # Previous Work:

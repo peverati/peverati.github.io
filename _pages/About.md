@@ -26,6 +26,7 @@ My office is #334 in the Olin Physical Science Building (OPS)
 ### Professional Experience:
 
 - **Current:** Associate Professor of Chemistry, Florida Institute of Technology, Melbourne FL.
+- **Previous (2016-2022):** Assistant Professor of Chemistry, Florida Institute of Technology, Melbourne FL.
 - **Previous (2012-2016):** Postdoctoral fellow, University of California, Berkeley, CA. Advisor: Prof. Martin Head-Gordon.
 - **Previous (2010-2012):** Postdoctoral fellow, University of Minnesota, Minneapolis, MN. Advisor: Prof. Donald G. Truhlar.
 
