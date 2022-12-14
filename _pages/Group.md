@@ -18,20 +18,19 @@ header:
 
 
 ## Group Leader: 
-Dr. Roberto Peverati - [about](/About/)
+- Dr. Roberto Peverati - [about](/About/)
 
 ## Graduate Students: 
-Coty Deluca - [email](mailto:cdeluca2019@my.fit.edu)
-
-Tegla Jones - [email](mailto:tjones2018@my.fit.edu)
-
-Antonella Ambrosini - [email](aambrosini2021@my.fit.edu)
+- Coty Deluca - Ph.D. student [email](mailto:cdeluca2019@my.fit.edu)
+- Tegla Jones - Ph.D. student [email](mailto:tjones2018@my.fit.edu)
+- Antonella Ambrosini - M.S. student [email](aambrosini2021@my.fit.edu)
 
 ## Undergraduate Students: 
-Gregory Aldrich - [email](mailto:galdrich2018@my.fit.edu)
+- Gregory Aldrich - [email](mailto:galdrich2018@my.fit.edu)
+- Gabe Silva - [email](mailto:jsilva2021@my.fit.edu)
 
 ## Alumni:
-Pierpaolo Morgante - currently postdoc @ University of Buffalo [email](mailto:pmorgante2017@go.fit.edu)
+- Pierpaolo Morgante - currently postdoc @ University of Buffalo [email](mailto:pmorgante2017@go.fit.edu)
 
 # Machines:
 ## Group Cluster (Carbon):
