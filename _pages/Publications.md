@@ -15,6 +15,9 @@ Here's a link to my Google Scholar profile: [![Google: Scholar](https://img.shie
 And below is a list of all publications, in reverse chronological order (most recent at the top). Notice that you can click on the badge to go directly to the DOI on the publisher's website. A green badge means that the article is available free of charge, either as an open-access publication or a pre-print. For red badges, I don't have the ability to link to a pdf because the Journal has the publishing rights (the good news is that most of our articles are green-badges, we try everything that we can to make this happen.) The github badge, when available, will bring you to the supporting information and additional material (e.g. codes, databases, etc.)
 
 # PVRT Research Lab:
+1. Egodawaththa, N.M.; Rajhel, O.; Ma, J.; Guruge, C.; Pabarue, A.B.; Harris, E.; Peverati, R.; Nesnas, N.; "Highly efficient Ca<sup>2+</sup> chelation activated by visible light" Org. Biomol. Chem. 2024, 22, 7194-7202.
+[![DOI:10.1039/D4OB00951G](https://img.shields.io/badge/DOI-10.1039/D4OB00951G-990033)](https://doi.org/10.1039/D4OB00951G){:target="_blank"}
+[![ChemRxiv:preprint](https://img.shields.io/badge/ChemRxiv-preprint-green)](https://chemrxiv.org/engage/chemrxiv/article-details/65e8f5ece9ebbb4db91888d1){:target="_blank"}
 1. Illner, D.; Lingam, M., Peverati, R.; "On the importance and challenges of modelling extraterrestrial photopigments via density-functional theory" Mol. Phys. 2023, e2261563.
 [![DOI:10.1080/00268976.2023.2261563](https://img.shields.io/badge/DOI-10.1080/00268976.2023.2261563-990033)](https://doi.org/10.1080/00268976.2023.2261563){:target="_blank"}
 [![arXiv:preprint](https://img.shields.io/badge/arXiv-preprint-green)](https://arxiv.org/abs/2307.15536){:target="_blank"}
@@ -41,7 +44,7 @@ And below is a list of all publications, in reverse chronological order (most re
 1. Morgante, P.; Peverati, R.; “ACCDB: A Collection of Computational-chemistry DataBases” J. Comput. Chem. 2019, 40, 839-848. [![DOI:10.1002/jcc.25761](https://img.shields.io/badge/DOI-10.1002/jcc.25761-990033)](https://doi.org/10.1002/jcc.25761){:target="_blank"} [![github](https://img.shields.io/badge/github-lightgrey?style=flat&logo=github)](https://github.com/peverati/ACCDB){:target="_blank"}
 1. Konkov, V.; Peverati, R.; “QMC-SW: A Simple Workflow for Quantum Monte Carlo Calculations in Chemistry” SoftwareX, 2019, 9, 7-14. [![DOI:10.1016/j.softx.2018.11.001](https://img.shields.io/badge/DOI-10.1016/j.softx.2018.11.001-green)](https://doi.org/10.1016/j.softx.2018.11.001){:target="_blank"} [![github](https://img.shields.io/badge/github-lightgrey?style=flat&logo=github)](https://github.com/peverati/QMC-SW){:target="_blank"}
 1. Reep, C.; Morgante, P.; Peverati, R.; Takenaka, N., “Axial-Chiral Biisoquinoline N,N’-Dioxides Bearing Polar Aromatic C-H Bonds as Catalysts in Sakurai-Hosomi-Denmark Allylation” Org. Lett. 2018, 20, 5757-5761. [![DOI:10.1021/acs.orglett.8b02457](https://img.shields.io/badge/DOI-10.1021/acs.orglett.8b02457-990033)](https://doi.org/10.1021/acs.orglett.8b02457){:target="_blank"}
-{: reversed="reversed" start="48"}
+{: reversed="reversed" start="49"}
 
 
 # Previous Work:
