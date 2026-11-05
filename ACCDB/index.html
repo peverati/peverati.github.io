@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ACCDB – A Collection of Chemistry DataBases</title>
+<meta name="description" content="Browse, visualize in 3D and download the reference energies and geometries of the ACCDB collection of computational chemistry benchmark databases.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="./">ACC<span>DB</span></a>
+  <nav class="toplinks">
+    <a href="https://github.com/peverati/ACCDB">GitHub</a>
+    <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.25761">ACCDB paper</a>
+    <a href="https://peverati.github.io">Peverati group</a>
+  </nav>
+</div></div>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>A Collection of Chemistry DataBases</h1>
+    <p>Reliable, freely available computational-chemistry benchmark databases for the evaluation and parametrization of electronic-structure methods. Pick a database to see its subsets, then a subset to inspect its reactions and reference energies, explore every molecule in 3D, and download the data.</p>
+    <p class="related">Looking for a smaller set? <a href="https://peverati.github.io/ASCDB/">ASCDB</a> distills GMTKN55, MGCDB84 and Minnesota 2015B into 200 statistically representative data points.</p>
+    <p class="related" id="fnnote"></p>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <input id="q" class="search" type="search" placeholder="Search the subsets of all databases, e.g. S66, barrier, hydrogen bond, W4-17…" autocomplete="off" aria-label="Search subsets">
+  <div style="height:22px"></div>
+
+  <div id="dbs"><p class="empty">Loading…</p></div>
+
+  <footer>
+    <p><b>How to cite.</b> Credit to the original authors of each database is mandatory (see the article listed on each subset); credit to ACCDB is appreciated:
+    Morgante, P.; Peverati, R. <i>J. Comput. Chem.</i> <b>2019</b>, 40 (6), 839–848.
+    <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.25761">doi:10.1002/jcc.25761</a></p>
+    <p>See also <a href="https://peverati.github.io/ASCDB/">ASCDB</a>, a statistically representative subset of ACCDB. ACCDB is released under the GNU GPL license by Peverati's Theoretical and Computational Chemistry group (TCC@FIT). Structures are viewed with <a href="https://3dmol.csb.pitt.edu/">3Dmol.js</a>.</p>
+  </footer>
+</main>
+
+<script src="assets/app.js"></script>
+<script>
+(async function () {
+  const idx = await loadJSON('data/index.json');
+  const dbs = idx.databases;
+  $('#stats').innerHTML =
+    stat(dbs.length, 'databases') + stat(dbs.reduce((a, d) => a + d.subsets.length, 0), 'subsets') +
+    stat(idx.nGeometries.toLocaleString(), 'geometries');
+  const nfn = dbs.reduce((a, d) => a + d.subsets.filter(s => s.fn).length, 0);
+  if (nfn) $('#fnnote').innerHTML = `Databases and subsets tagged <span class="tag inline">DFT</span> (or <span class="tag inline">WFT</span>, for wavefunction methods) come with the errors of up to ${Math.max(...Object.values(idx.functionals).map(f => f.count))} exchange-correlation functionals, with statistics and plots.`;
+
+  const dbCard = d => `<a class="dbcard" href="database.html?id=${encodeURIComponent(d.id)}">${d.subsets.some(x => x.fn) ? `<span class="tag" title="Method results available">${d.subsets.filter(x => x.fn).every(x => x.fnTag === 'WFT') ? 'WFT' : 'DFT'}</span>` : ''}
+      <h3>${esc(d.name)}</h3><div class="dbt">${esc(d.title)}</div><p>${esc(d.blurb)}</p>
+      <div class="dbm">${d.subsets.length} subset${d.subsets.length === 1 ? '' : 's'} · ${d.subsets.reduce((a, s) => a + s.n, 0).toLocaleString()} reference data</div></a>`;
+
+  function render(filter) {
+    const f = filter.trim().toLowerCase();
+    if (!f) { $('#dbs').innerHTML = `<div class="dbgrid">${dbs.map(dbCard).join('')}</div>`; return; }
+    let html = '', shown = 0;
+    for (const d of dbs) {
+      const subs = d.subsets.filter(s => (s.name + ' ' + (s.category || '') + ' ' + (s.description || '') + ' ' + d.name).toLowerCase().includes(f));
+      if (!subs.length) continue;
+      shown += subs.length;
+      html += `<section class="db"><h2><a href="database.html?id=${encodeURIComponent(d.id)}">${esc(d.name)}</a></h2><div class="grid">` + subs.map(s =>
+        `<a class="card" href="subset.html?id=${encodeURIComponent(s.id)}" title="${esc(s.description || '')}">${s.fn ? `<span class="tag" title="Results of ${s.fn} ${s.fnTag === 'WFT' ? 'wavefunction methods' : 'methods (DFT functionals)'} available">${s.fnTag || 'DFT'}</span>` : ''}<b>${esc(s.name)}</b><small>${s.n.toLocaleString()} ${s.property ? 'values' : 'reactions'} · ${s.nMol.toLocaleString()} molecules</small></a>`).join('') + '</div></section>';
+    }
+    $('#dbs').innerHTML = shown ? `<p class="resnote">${shown} matching subset${shown > 1 ? 's' : ''}</p>${html}` : '<p class="empty">No subset matches your search.</p>';
+  }
+  function stat(n, label) { return `<div class="stat"><b>${n}</b><span>${label}</span></div>`; }
+  render('');
+  $('#q').addEventListener('input', e => render(e.target.value));
+})().catch(e => { $('#dbs').innerHTML = `<p class="empty">Could not load data (${esc(e.message)}). If you opened this file directly, serve the folder over HTTP, e.g. <code>python3 -m http.server</code>.</p>`; });
+</script>
+</body>
+</html>

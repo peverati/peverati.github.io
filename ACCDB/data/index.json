@@ -1,0 +1,2110 @@
+{
+ "accdb": {
+  "text": "Morgante, P.; Peverati, R. J. Comput. Chem. 2019, 40 (6), 839-848 (the ACCDB project).",
+  "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.25761"
+ },
+ "nGeometries": 10049,
+ "databases": [
+  {
+   "id": "MGCDB84",
+   "name": "MGCDB84",
+   "title": "Main Group Chemistry DataBase (84 subsets)",
+   "blurb": "Head-Gordon's database for DFT development: non-covalent interactions, isomerization energies, thermochemistry, barrier heights and more.",
+   "refs": [
+    {
+     "text": "Mardirossian, N.; Head-Gordon, M. Mol. Phys. 2017, 115 (19), 2315-2372.",
+     "url": "https://www.tandfonline.com/doi/abs/10.1080/00268976.2017.1333644"
+    }
+   ],
+   "subsets": [
+    {
+     "id": "MGCDB84__A21x12",
+     "name": "A21x12",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "PECs for the 21 equilibrium complexes from A24",
+     "n": 252,
+     "nMol": 294,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__A24",
+     "name": "A24",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of small non-covalent complexes",
+     "n": 24,
+     "nMol": 72,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__AE18",
+     "name": "AE18",
+     "category": "Others",
+     "description": "Absolute atomic energies of hydrogen through argon",
+     "n": 18,
+     "nMol": 18,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__AlkAtom19",
+     "name": "AlkAtom19",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "n = 1 - 8 alkane atomization energies",
+     "n": 19,
+     "nMol": 21,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__AlkIsomer11",
+     "name": "AlkIsomer11",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of n = 4 - 8 alkanes",
+     "n": 11,
+     "nMol": 16,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__AlkIsod14",
+     "name": "AlkIsod14",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "n = 3 - 8 alkane Isodesmic reaction energies",
+     "n": 14,
+     "nMol": 16,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__Bauza30",
+     "name": "Bauza30",
+     "category": "Noncovalent Difficult (NCD)",
+     "description": "Binding energies of halogen-, chalcogen-, and pnicogen-bonded dimers",
+     "n": 30,
+     "nMol": 90,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__Butanediol65",
+     "name": "Butanediol65",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of butane-1,4-diol",
+     "n": 65,
+     "nMol": 65,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__BzDC215",
+     "name": "BzDC215",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "PECs for benzene interacting with two rare-gas atoms and eight first- and second-row hydrides",
+     "n": 215,
+     "nMol": 235,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__CT20",
+     "name": "CT20",
+     "category": "Noncovalent Difficult (NCD)",
+     "description": "Binding energies of charge-transfer complexes",
+     "n": 20,
+     "nMol": 60,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__DIE60",
+     "name": "DIE60",
+     "category": "Isomerization energies Difficult (ID)",
+     "description": "Isomerization energies of reactions involving double-bond migration in conjugated dienes",
+     "n": 60,
+     "nMol": 120,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__DS14",
+     "name": "DS14",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of complexes containing divalent sulfur",
+     "n": 14,
+     "nMol": 42,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__EA13",
+     "name": "EA13",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Adiabatic electron affinities",
+     "n": 13,
+     "nMol": 26,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__EIE22",
+     "name": "EIE22",
+     "category": "Isomerization energies Difficult (ID)",
+     "description": "Isomerization energies of enecarbonyls",
+     "n": 22,
+     "nMol": 44,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__FmH2O10",
+     "name": "FmH2O10",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of Isomers of F-(H2O)10",
+     "n": 10,
+     "nMol": 120,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__ACONF",
+     "name": "ACONF",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of alkane conformers",
+     "n": 15,
+     "nMol": 18,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__CYCONF",
+     "name": "CYCONF",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of cysteine conformers",
+     "n": 11,
+     "nMol": 11,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__G21EA",
+     "name": "G21EA",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Adiabatic electron affinities of atoms and small molecules",
+     "n": 25,
+     "nMol": 50,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__G21IP",
+     "name": "G21IP",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Adiabatic ionization potentials of atoms and small molecules",
+     "n": 36,
+     "nMol": 71,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__NBPRC",
+     "name": "NBPRC",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Reactions involving NH3/BH3 and PH3/BH3",
+     "n": 12,
+     "nMol": 21,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__WATER27",
+     "name": "WATER27",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of neutral and charged water clusters",
+     "n": 23,
+     "nMol": 26,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__NHTBH38",
+     "name": "NHTBH38",
+     "category": "Barrier Heights (BH)",
+     "description": "Non-hydrogen transfer barrier heights",
+     "n": 38,
+     "nMol": 46,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__HTBH38",
+     "name": "HTBH38",
+     "category": "Barrier Heights (BH)",
+     "description": "Hydrogen transfer barrier heights",
+     "n": 38,
+     "nMol": 40,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__BH76RC",
+     "name": "BH76RC",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Reaction energies from HTBH38 and NHTBH38",
+     "n": 30,
+     "nMol": 48,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__DBH24",
+     "name": "DBH24",
+     "category": "Barrier Heights (BH)",
+     "description": "Diverse barrier heights",
+     "n": 24,
+     "nMol": 41,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__H2O6Bind8",
+     "name": "H2O6Bind8",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of Isomers of (H2O)6",
+     "n": 8,
+     "nMol": 56,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__HB15",
+     "name": "HB15",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of hydrogen-bonded dimers featuring ionic groups common in biomolecules",
+     "n": 15,
+     "nMol": 45,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__HSG",
+     "name": "HSG",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of small ligands interacting with protein receptors",
+     "n": 21,
+     "nMol": 63,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__HW30",
+     "name": "HW30",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of hydrocarbon-water dimers",
+     "n": 30,
+     "nMol": 90,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__HW6Cl",
+     "name": "HW6Cl",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of Cl-(H2O)n (n = 1 - 6)",
+     "n": 6,
+     "nMol": 33,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__HW6F",
+     "name": "HW6F",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of F-(H2O)n (n = 1 - 6)",
+     "n": 6,
+     "nMol": 33,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__IP13",
+     "name": "IP13",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Adiabatic ionization potentials",
+     "n": 13,
+     "nMol": 26,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__NBC10",
+     "name": "NBC10",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "PECs for BzBz (5), BzMe (1), MeMe (1), BzH2S (1), and PyPy (2)",
+     "n": 184,
+     "nMol": 204,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__NC15",
+     "name": "NC15",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of very small non-covalent complexes",
+     "n": 15,
+     "nMol": 45,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__Pentane14",
+     "name": "Pentane14",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of stationary points on the n-pentane torsional surface",
+     "n": 14,
+     "nMol": 14,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__RG10",
+     "name": "RG10",
+     "category": "Others",
+     "description": "PECs for the 10 rare-gas dimers involving helium through krypton",
+     "n": 569,
+     "nMol": 573,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__S22",
+     "name": "S22",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of hydrogen-bonded and dispersion-bound non-covalent complexes",
+     "n": 22,
+     "nMol": 66,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__S66",
+     "name": "S66",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of non-covalent interactions found in organic molecules and biomolecules",
+     "n": 66,
+     "nMol": 198,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__S66x8",
+     "name": "S66x8",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "PECs for the 66 complexes from S66x8",
+     "n": 528,
+     "nMol": 660,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__Shields38",
+     "name": "Shields38",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of (H2O)n (n = 2 - 10)",
+     "n": 38,
+     "nMol": 39,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__Styrene45",
+     "name": "Styrene45",
+     "category": "Isomerization energies Difficult (ID)",
+     "description": "Isomerization energies of C8H8",
+     "n": 45,
+     "nMol": 45,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__SW49Rel345",
+     "name": "SW49Rel345",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of SO42-(H2O)n (n = 3 - 5)",
+     "n": 31,
+     "nMol": 31,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__SW49Bind345",
+     "name": "SW49Bind345",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of Isomers of SO42-(H2O)n (n = 3 - 5)",
+     "n": 31,
+     "nMol": 32,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__SW49Rel6",
+     "name": "SW49Rel6",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of SO42-(H2O)6",
+     "n": 18,
+     "nMol": 18,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__SW49Bind6",
+     "name": "SW49Bind6",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of Isomers of SO42-(H2O)6",
+     "n": 18,
+     "nMol": 20,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__TA13",
+     "name": "TA13",
+     "category": "Noncovalent Difficult (NCD)",
+     "description": "Binding energies of dimers involving radicals",
+     "n": 13,
+     "nMol": 27,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__BDE99MR",
+     "name": "BDE99MR",
+     "category": "ThermoChemistry Difficult (TCD)",
+     "description": "Bond dissociation energies (MR)",
+     "n": 16,
+     "nMol": 22,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__BDE99nonMR",
+     "name": "BDE99nonMR",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Bond dissociation energies (SR)",
+     "n": 83,
+     "nMol": 88,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__HAT707nonMR",
+     "name": "HAT707nonMR",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Heavy-atom transfer energies (SR)",
+     "n": 499,
+     "nMol": 91,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__HAT707MR",
+     "name": "HAT707MR",
+     "category": "ThermoChemistry Difficult (TCD)",
+     "description": "Heavy-atom transfer energies (MR)",
+     "n": 208,
+     "nMol": 87,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__ISOMERIZATION20",
+     "name": "ISOMERIZATION20",
+     "category": "Isomerization energies Difficult (ID)",
+     "description": "Isomerization energies",
+     "n": 20,
+     "nMol": 31,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__SN13",
+     "name": "SN13",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Nucleophilic substitution energies",
+     "n": 13,
+     "nMol": 21,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__TAE140nonMR",
+     "name": "TAE140nonMR",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Total atomization energies (SR)",
+     "n": 124,
+     "nMol": 136,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__TAE140MR",
+     "name": "TAE140MR",
+     "category": "ThermoChemistry Difficult (TCD)",
+     "description": "Total atomization energies (MR)",
+     "n": 16,
+     "nMol": 25,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__X40",
+     "name": "X40",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of non-covalent interactions involving halogenated molecules",
+     "n": 31,
+     "nMol": 93,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__XB18",
+     "name": "XB18",
+     "category": "Noncovalent Difficult (NCD)",
+     "description": "Binding energies of small halogen-bonded dimers",
+     "n": 8,
+     "nMol": 14,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__XB51",
+     "name": "XB51",
+     "category": "Noncovalent Difficult (NCD)",
+     "description": "Binding energies of large halogen-bonded dimers",
+     "n": 20,
+     "nMol": 33,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__BHPERI26",
+     "name": "BHPERI26",
+     "category": "Barrier Heights (BH)",
+     "description": "Barrier heights of pericyclic reactions",
+     "n": 26,
+     "nMol": 52,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__CR20",
+     "name": "CR20",
+     "category": "Barrier Heights (BH)",
+     "description": "Cycloreversion reaction energies",
+     "n": 20,
+     "nMol": 60,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__CRBH20",
+     "name": "CRBH20",
+     "category": "Barrier Heights (BH)",
+     "description": "Barrier heights for cycloreversion of heterocyclic rings",
+     "n": 20,
+     "nMol": 40,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__AlkBind12",
+     "name": "AlkBind12",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of saturated and unsaturated hydrocarbon dimers",
+     "n": 12,
+     "nMol": 36,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__CO2Nitrogen16",
+     "name": "CO2Nitrogen16",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of CO2 to molecular models of pyridinic N-doped graphene",
+     "n": 16,
+     "nMol": 48,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__HB49",
+     "name": "HB49",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of small- and medium-sized hydrogen-bonded systems",
+     "n": 49,
+     "nMol": 71,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__Ionic43",
+     "name": "Ionic43",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of anion-neutral, cation-neutral, and anion-cation dimers",
+     "n": 43,
+     "nMol": 129,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__3B-69-DIM",
+     "name": "3B-69-DIM",
+     "category": "Noncovalent Easy Dimers (NCED)",
+     "description": "Binding energies of all relevant pairs of monomers from 3B-69-TRIM",
+     "n": 207,
+     "nMol": 414,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__3B-69-TRIM",
+     "name": "3B-69-TRIM",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of trimers, with three different orientations of 23 distinct molecular crystals",
+     "n": 69,
+     "nMol": 276,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__H2O20Bind4",
+     "name": "H2O20Bind4",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of Isomers of (H2O)20 (dod, fc, fs, and es)",
+     "n": 4,
+     "nMol": 5,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__H2O20Rel4",
+     "name": "H2O20Rel4",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of (H2O)20 (dod, fc, fs, and es)",
+     "n": 4,
+     "nMol": 4,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__H2O20Bind10",
+     "name": "H2O20Bind10",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of Isomers of (H2O)20 (low-energy structures)",
+     "n": 10,
+     "nMol": 210,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__H2O20Rel10",
+     "name": "H2O20Rel10",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of (H2O)20 (low-energy structures)",
+     "n": 10,
+     "nMol": 210,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__H2O16Rel5",
+     "name": "H2O16Rel5",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of (H2O)16 (boat and fused cube structures)",
+     "n": 5,
+     "nMol": 5,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__Melatonin52",
+     "name": "Melatonin52",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of melatonin",
+     "n": 52,
+     "nMol": 52,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__BSR36",
+     "name": "BSR36",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Hydrocarbon bond separation reaction energies",
+     "n": 36,
+     "nMol": 38,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__HNBrBDE18",
+     "name": "HNBrBDE18",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Homolytic N�Br bond dissociation energies",
+     "n": 18,
+     "nMol": 37,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__PlatonicTAE6",
+     "name": "PlatonicTAE6",
+     "category": "ThermoChemistry Difficult (TCD)",
+     "description": "Total atomization energies of platonic hydrocarbon cages, CnHn (n = 4, 6, 8, 10, 12, 20)",
+     "n": 6,
+     "nMol": 8,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__PlatonicIG6",
+     "name": "PlatonicIG6",
+     "category": "ThermoChemistry Difficult (TCD)",
+     "description": "Isogyric reactions involving platonic hydrocarbon cages, CnHn (n = 4, 6, 8, 10, 12, 20)",
+     "n": 6,
+     "nMol": 8,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__PlatonicID6",
+     "name": "PlatonicID6",
+     "category": "ThermoChemistry Difficult (TCD)",
+     "description": "Isodesmic reactions involving platonic hydrocarbon cages, CnHn (n = 4, 6, 8, 10, 12, 20)",
+     "n": 6,
+     "nMol": 8,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__PlatonicHD6",
+     "name": "PlatonicHD6",
+     "category": "ThermoChemistry Difficult (TCD)",
+     "description": "Homodesmotic reactions involving platonic hydrocarbon cages, CnHn (n = 4, 6, 8, 10, 12, 20)",
+     "n": 6,
+     "nMol": 8,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__PX13",
+     "name": "PX13",
+     "category": "Barrier Heights (BH)",
+     "description": "Barrier heights for proton exchange in water, ammonia, and hydrogen fluoride clusters",
+     "n": 13,
+     "nMol": 16,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__CE20",
+     "name": "CE20",
+     "category": "Noncovalent Easy Clusters (NCEC)",
+     "description": "Binding energies of water, ammonia, and hydrogen fluoride clusters",
+     "n": 20,
+     "nMol": 23,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__WCPT27",
+     "name": "WCPT27",
+     "category": "Barrier Heights (BH)",
+     "description": "Barrier heights of water-catalyzed proton-transfer reactions",
+     "n": 27,
+     "nMol": 37,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__WCPT6",
+     "name": "WCPT6",
+     "category": "ThermoChemistry Easy (TCE)",
+     "description": "Tautomerization energies for water-catalyzed proton-transfer reactions",
+     "n": 6,
+     "nMol": 12,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__YMPJ519",
+     "name": "YMPJ519",
+     "category": "Isomerization energies Easy (IE)",
+     "description": "Isomerization energies of the proteinogenic amino acids",
+     "n": 519,
+     "nMol": 519,
+     "property": false,
+     "fn": 203
+    },
+    {
+     "id": "MGCDB84__C20C24",
+     "name": "C20C24",
+     "category": "Isomerization energies Difficult (ID)",
+     "description": "Isomerization energies of the ground state structures of C20 and C24",
+     "n": 8,
+     "nMol": 8,
+     "property": false,
+     "fn": 203
+    }
+   ],
+   "fnSubsets": 84,
+   "fnCount": 203
+  },
+  {
+   "id": "GMTKN55",
+   "name": "GMTKN55",
+   "title": "General Main Group Thermochemistry, Kinetics and Noncovalent Interactions (55 subsets)",
+   "blurb": "Grimme's general main-group benchmark database.",
+   "refs": [
+    {
+     "text": "Goerigk, L.; Hansen, A.; Bauer, C.; Ehrlich, S.; Najibi, A.; Grimme, S. Phys. Chem. Chem. Phys. 2017, 19 (48), 32184-32215.",
+     "url": "http://pubs.rsc.org/en/Content/ArticleLanding/2017/CP/C7CP04913G"
+    }
+   ],
+   "subsets": [
+    {
+     "id": "GMTKN55__ACONF",
+     "name": "ACONF",
+     "category": "Intramolecular noncovalent interactions",
+     "description": "",
+     "n": 15,
+     "nMol": 18,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__ADIM6",
+     "name": "ADIM6",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 6,
+     "nMol": 12,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__AHB21",
+     "name": "AHB21",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 21,
+     "nMol": 63,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__AL2X6",
+     "name": "AL2X6",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 6,
+     "nMol": 11,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__ALK8",
+     "name": "ALK8",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 8,
+     "nMol": 17,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__ALKBDE10",
+     "name": "ALKBDE10",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 10,
+     "nMol": 20,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__Amino20x4",
+     "name": "Amino20x4",
+     "category": "Intramolecular noncovalent interactions",
+     "description": "",
+     "n": 80,
+     "nMol": 100,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__BH76RC",
+     "name": "BH76RC",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 30,
+     "nMol": 41,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__BH76",
+     "name": "BH76",
+     "category": "reaction barrier heights",
+     "description": "",
+     "n": 76,
+     "nMol": 78,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__BHDIV10",
+     "name": "BHDIV10",
+     "category": "reaction barrier heights",
+     "description": "",
+     "n": 10,
+     "nMol": 20,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__BHPERI",
+     "name": "BHPERI",
+     "category": "reaction barrier heights",
+     "description": "",
+     "n": 26,
+     "nMol": 52,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__BHROT27",
+     "name": "BHROT27",
+     "category": "reaction barrier heights",
+     "description": "",
+     "n": 27,
+     "nMol": 40,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__BSR36",
+     "name": "BSR36",
+     "category": "reaction energies for large systems and isomerisation reactions",
+     "description": "",
+     "n": 36,
+     "nMol": 38,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__BUT14DIOL",
+     "name": "BUT14DIOL",
+     "category": "Intramolecular noncovalent interactions",
+     "description": "",
+     "n": 64,
+     "nMol": 65,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__C60ISO",
+     "name": "C60ISO",
+     "category": "reaction energies for large systems and isomerisation reactions",
+     "description": "",
+     "n": 9,
+     "nMol": 10,
+     "property": false,
+     "fn": 218
+    },
+    {
+     "id": "GMTKN55__CARBHB12",
+     "name": "CARBHB12",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 12,
+     "nMol": 36,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__CDIE20",
+     "name": "CDIE20",
+     "category": "reaction energies for large systems and isomerisation reactions",
+     "description": "",
+     "n": 20,
+     "nMol": 36,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__CHB6",
+     "name": "CHB6",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 6,
+     "nMol": 18,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__DARC",
+     "name": "DARC",
+     "category": "reaction energies for large systems and isomerisation reactions",
+     "description": "",
+     "n": 14,
+     "nMol": 22,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__DC13",
+     "name": "DC13",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 13,
+     "nMol": 30,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__DIPCS10",
+     "name": "DIPCS10",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 10,
+     "nMol": 20,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__FH51",
+     "name": "FH51",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 51,
+     "nMol": 87,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__G21EA",
+     "name": "G21EA",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 25,
+     "nMol": 50,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__G21IP",
+     "name": "G21IP",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 36,
+     "nMol": 71,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__G2RC",
+     "name": "G2RC",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 25,
+     "nMol": 47,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__HAL59",
+     "name": "HAL59",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 59,
+     "nMol": 105,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__HEAVY28",
+     "name": "HEAVY28",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 28,
+     "nMol": 38,
+     "property": false,
+     "fn": 218
+    },
+    {
+     "id": "GMTKN55__HEAVYSB11",
+     "name": "HEAVYSB11",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 11,
+     "nMol": 22,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__ICONF",
+     "name": "ICONF",
+     "category": "Intramolecular noncovalent interactions",
+     "description": "",
+     "n": 17,
+     "nMol": 27,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__IDISP",
+     "name": "IDISP",
+     "category": "Intramolecular noncovalent interactions",
+     "description": "",
+     "n": 6,
+     "nMol": 13,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__IL16",
+     "name": "IL16",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 16,
+     "nMol": 48,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__INV24",
+     "name": "INV24",
+     "category": "reaction barrier heights",
+     "description": "",
+     "n": 24,
+     "nMol": 48,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__ISO34",
+     "name": "ISO34",
+     "category": "reaction energies for large systems and isomerisation reactions",
+     "description": "",
+     "n": 34,
+     "nMol": 63,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__ISOL24",
+     "name": "ISOL24",
+     "category": "reaction energies for large systems and isomerisation reactions",
+     "description": "",
+     "n": 24,
+     "nMol": 48,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__MB16-43",
+     "name": "MB16-43",
+     "category": "reaction energies for large systems and isomerisation reactions",
+     "description": "",
+     "n": 43,
+     "nMol": 58,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__MCONF",
+     "name": "MCONF",
+     "category": "Intramolecular noncovalent interactions",
+     "description": "",
+     "n": 51,
+     "nMol": 52,
+     "property": false,
+     "fn": 220
+    },
+    {
+     "id": "GMTKN55__NBPRC",
+     "name": "NBPRC",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 6,
+     "nMol": 12,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__PA26",
+     "name": "PA26",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 26,
+     "nMol": 52,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__PArel",
+     "name": "PArel",
+     "category": "reaction energies for large systems and isomerisation reactions",
+     "description": "",
+     "n": 20,
+     "nMol": 31,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__PCONF21",
+     "name": "PCONF21",
+     "category": "Intramolecular noncovalent interactions",
+     "description": "",
+     "n": 18,
+     "nMol": 21,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__PNICO23",
+     "name": "PNICO23",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 23,
+     "nMol": 69,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__PX13",
+     "name": "PX13",
+     "category": "reaction barrier heights",
+     "description": "",
+     "n": 13,
+     "nMol": 26,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__RC21",
+     "name": "RC21",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 21,
+     "nMol": 41,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__RG18",
+     "name": "RG18",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 18,
+     "nMol": 25,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__RSE43",
+     "name": "RSE43",
+     "category": "reaction energies for large systems and isomerisation reactions",
+     "description": "",
+     "n": 43,
+     "nMol": 88,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__S22",
+     "name": "S22",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 22,
+     "nMol": 56,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__S66",
+     "name": "S66",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 66,
+     "nMol": 198,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__SCONF",
+     "name": "SCONF",
+     "category": "Intramolecular noncovalent interactions",
+     "description": "",
+     "n": 17,
+     "nMol": 19,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__SIE4x4",
+     "name": "SIE4x4",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 16,
+     "nMol": 23,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__TAUT15",
+     "name": "TAUT15",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 15,
+     "nMol": 25,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__UPU23",
+     "name": "UPU23",
+     "category": "Intramolecular noncovalent interactions",
+     "description": "",
+     "n": 23,
+     "nMol": 24,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__W4-11",
+     "name": "W4-11",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 140,
+     "nMol": 152,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__WATER27",
+     "name": "WATER27",
+     "category": "Intermolecular noncovalent interactions",
+     "description": "",
+     "n": 27,
+     "nMol": 30,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__WCPT18",
+     "name": "WCPT18",
+     "category": "reaction barrier heights",
+     "description": "",
+     "n": 18,
+     "nMol": 28,
+     "property": false,
+     "fn": 221
+    },
+    {
+     "id": "GMTKN55__YBDE18",
+     "name": "YBDE18",
+     "category": "basic properties and reaction energies for small systems",
+     "description": "",
+     "n": 18,
+     "nMol": 29,
+     "property": false,
+     "fn": 221
+    }
+   ],
+   "fnSubsets": 55,
+   "fnCount": 221
+  },
+  {
+   "id": "MB08-165",
+   "name": "MB08-165",
+   "title": "Mindless Benchmark of 165 molecules containing 8 atoms",
+   "blurb": "Korth and Grimme's \"mindless\" benchmark: 165 artificial, randomly generated 8-atom molecules of the main-group elements H to Cl (no noble gases), uncharged, single-reference, about 25% open-shell. It combines the 931 set (83 systems, PBE/TZVP geometries) and the ORG set (84 systems, PBE/TZVPP geometries) without their two duplicates. Superseded by MB16-43 but still useful.",
+   "refs": [
+    {
+     "text": "Korth, M.; Grimme, S. J. Chem. Theory Comput. 2009, 5 (4), 993-1003.",
+     "url": "https://pubs.acs.org/doi/abs/10.1021/ct800511q"
+    }
+   ],
+   "subsets": [
+    {
+     "id": "MB08-165__MB08-165",
+     "name": "MB08-165",
+     "category": "Decomposition energies",
+     "description": "Reaction energies of the decomposition of the 165 artificial 8-atom molecules into simple hydrides (groups 1-4) and diatomics (groups 5-7). Reactions 1-81 are the systems 1-83 of the 931 set (without 12 and 49, which also appear in the ORG set), reactions 82-165 are the ORG set; reference values from the supporting information.",
+     "n": 165,
+     "nMol": 180,
+     "property": false,
+     "fn": 6,
+     "fnTag": "WFT"
+    },
+    {
+     "id": "MB08-165__MB08-165-AE",
+     "name": "MB08-165-AE",
+     "category": "Atomisation energies",
+     "description": "Atomisation reference energies of the 165 artificial 8-atom molecules of MB08-165 (same numbering as the decomposition energies), from the supporting information of Korth and Grimme. Not part of the ACCDB csv files.",
+     "n": 165,
+     "nMol": 165,
+     "property": true
+    }
+   ]
+  },
+  {
+   "id": "Minnesota",
+   "name": "Minnesota 2015B",
+   "title": "Minnesota Database 2015B",
+   "blurb": "Truhlar's database (excluding geometries and solid-state sets), plus the in-house MN-RE reaction-energy extension.",
+   "refs": [
+    {
+     "text": "Yu, H. S.; Zhang, W.; Verma, P.; He, X.; Truhlar, D. G. Phys. Chem. Chem. Phys. 2015, 17, 12146-12160 (Database 2015).",
+     "url": "https://pubs.rsc.org/en/Content/ArticleLanding/2015/CP/C5CP01425E"
+    },
+    {
+     "text": "Yu, H.; He, X.; Truhlar, D. G. J. Chem. Theory Comput. 2016, 12, 1280 (Database 2015A).",
+     "url": "https://pubs.acs.org/doi/10.1021/acs.jctc.5b01082"
+    },
+    {
+     "text": "Yu, H.; He, X.; Truhlar, D. G. Chem. Sci. 2016, 7, 5032 (Database 2015B).",
+     "url": "http://pubs.rsc.org/en/content/articlelanding/2016/sc/c6sc00705h"
+    }
+   ],
+   "subsets": [
+    {
+     "id": "Minnesota__2pIsoE4",
+     "name": "2pIsoE4",
+     "category": "Isomerization Energies (IsoE14)",
+     "description": "2p Isomerization Energies",
+     "n": 4,
+     "nMol": 8,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__3dAEE8",
+     "name": "3dAEE8",
+     "category": "Excitation Energies (EE18)",
+     "description": "3d transition metals Atomic Excitation Energies and first excitation energy of Fe",
+     "n": 8,
+     "nMol": 16,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__4dAEE5",
+     "name": "4dAEE5",
+     "category": "Excitation Energies (EE18)",
+     "description": "4d transition metals Atomic Excitation Energies",
+     "n": 5,
+     "nMol": 10,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__4pIsoE4",
+     "name": "4pIsoE4",
+     "category": "Isomerization Energies (IsoE14)",
+     "description": "4p Isomerization Energies",
+     "n": 4,
+     "nMol": 8,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__ABDE13",
+     "name": "ABDE13",
+     "category": "Main Group Bond Energies (MGBE150)",
+     "description": "Alkyl Bond Dissociation energies",
+     "n": 13,
+     "nMol": 19,
+     "property": false,
+     "fn": 76
+    },
+    {
+     "id": "Minnesota__AE17",
+     "name": "AE17",
+     "category": "Others",
+     "description": "Atomic Energies",
+     "n": 17,
+     "nMol": 17,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__DC9-12",
+     "name": "DC9-12",
+     "category": null,
+     "description": "",
+     "n": 9,
+     "nMol": 23,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__EA13",
+     "name": "EA13",
+     "category": "Others",
+     "description": "Electron Affinities",
+     "n": 13,
+     "nMol": 26,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__HC7-11",
+     "name": "HC7-11",
+     "category": null,
+     "description": "",
+     "n": 7,
+     "nMol": 12,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__HTBH38",
+     "name": "HTBH38",
+     "category": "Barrier Heights (BH76)",
+     "description": "Hydrogen Transfer Barrier Heights",
+     "n": 38,
+     "nMol": 40,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__IP23",
+     "name": "IP23",
+     "category": "Others",
+     "description": "Ionization Potentials",
+     "n": 23,
+     "nMol": 46,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__IsoL6_11",
+     "name": "IsoL6_11",
+     "category": null,
+     "description": "",
+     "n": 6,
+     "nMol": 12,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__MR-MGM-BE4",
+     "name": "MR-MGM-BE4",
+     "category": "Main Group Bond Energies (MGBE150)",
+     "description": "Multi-Reference Main-Group-Metals Bond Energies",
+     "n": 4,
+     "nMol": 11,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__MR-MGN-BE17",
+     "name": "MR-MGN-BE17",
+     "category": "Main Group Bond Energies (MGBE150)",
+     "description": "Multi-Reference Main-Group-Non-metals Bond Energies",
+     "n": 17,
+     "nMol": 27,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__MR-TM-BE13",
+     "name": "MR-TM-BE13",
+     "category": "Transition Metal Bonding Energies (TMBE33)",
+     "description": "Multi-Reference Transition-Metals Bond Energies",
+     "n": 13,
+     "nMol": 30,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__MR-TMD_BE3",
+     "name": "MR-TMD_BE3",
+     "category": "Transition Metal Bonding Energies (TMBE33)",
+     "description": "Multi-Reference Transition-Metals Dimers Bond Energies",
+     "n": 3,
+     "nMol": 6,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__NCCE23",
+     "name": "NCCE23",
+     "category": "Noncovalent Interactions (NC87)",
+     "description": "NonCovalent Complexation Energies",
+     "n": 23,
+     "nMol": 41,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__CT7",
+     "name": "CT7",
+     "category": "Noncovalent Interactions (NC87)",
+     "description": "NonCovalent Complexation Energies with charge transfer",
+     "n": 7,
+     "nMol": 15,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__NGDWI21",
+     "name": "NGDWI21",
+     "category": "Noncovalent Interactions (NC87)",
+     "description": "Noble gas dimer weak interaction",
+     "n": 21,
+     "nMol": 25,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__NHTBH38",
+     "name": "NHTBH38",
+     "category": "Barrier Heights (BH76)",
+     "description": "Non-Hydrogen Transfer Barrier Heights",
+     "n": 38,
+     "nMol": 46,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__PA8",
+     "name": "PA8",
+     "category": "Others",
+     "description": "Proton Affinities",
+     "n": 8,
+     "nMol": 16,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__S6x6",
+     "name": "S6x6",
+     "category": "Noncovalent Interactions (NC87)",
+     "description": "Six dimers at six intermonomeric distances",
+     "n": 36,
+     "nMol": 48,
+     "property": false,
+     "fn": 88
+    },
+    {
+     "id": "Minnesota__SMAE3",
+     "name": "SMAE3",
+     "category": "Others",
+     "description": "Sulfur Molecules Atomization Energies",
+     "n": 3,
+     "nMol": 6,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__SR-MGM-BE9",
+     "name": "SR-MGM-BE9",
+     "category": "Main Group Bond Energies (MGBE150)",
+     "description": "Single-Reference Main-Group-Metals Bond Energies",
+     "n": 9,
+     "nMol": 19,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__SR-MGN-BE107",
+     "name": "SR-MGN-BE107",
+     "category": "Main Group Bond Energies (MGBE150)",
+     "description": "Single-Reference Main-Group-Non-metals Bond Energies",
+     "n": 107,
+     "nMol": 117,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__SR-TM-BE17",
+     "name": "SR-TM-BE17",
+     "category": "Transition Metal Bonding Energies (TMBE33)",
+     "description": "Single-Reference Transition-Metals Bond Energies",
+     "n": 17,
+     "nMol": 36,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__pEE5",
+     "name": "pEE5",
+     "category": "Excitation Energies (EE18)",
+     "description": "p-block excitation energies",
+     "n": 5,
+     "nMol": 10,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__pTC13",
+     "name": "pTC13",
+     "category": "HydroCarbons ThermoChemistry (HCTC20)",
+     "description": "ThermoChemistry of pi systems",
+     "n": 13,
+     "nMol": 26,
+     "property": false,
+     "fn": 94
+    },
+    {
+     "id": "Minnesota__MN-RE",
+     "name": "MN-RE",
+     "category": "Others",
+     "description": "Reaction energies generated automatically from the atomization energies of the Minnesota database (developed in-house, TCC@FIT).",
+     "n": 9136,
+     "nMol": 151,
+     "property": false
+    }
+   ],
+   "fnSubsets": 28,
+   "fnCount": 94
+  },
+  {
+   "id": "W4-17",
+   "name": "W4-17",
+   "title": "W4-17 atomization energies",
+   "blurb": "Martin's Weizmann-4 database of 200 small molecules, plus the in-house W4-17-RE reaction-energy extension.",
+   "refs": [
+    {
+     "text": "Karton, A.; Sylvetsky, N.; Martin, J. M. L. J. Comput. Chem. 2017, 38, 2063-2075.",
+     "url": "https://onlinelibrary.wiley.com/doi/10.1002/jcc.24854"
+    }
+   ],
+   "subsets": [
+    {
+     "id": "W4-17__W4-17",
+     "name": "W4-17",
+     "category": "Total atomization energies",
+     "description": "Total atomization energies (TAE) of 200 small molecules, all computed with variants of the W4 composite method.",
+     "n": 1042,
+     "nMol": 215,
+     "property": false
+    },
+    {
+     "id": "W4-17__W4-17-RE",
+     "name": "W4-17-RE",
+     "category": "Reaction energies",
+     "description": "Reaction energies generated automatically from W4-17 (developed in-house, TCC@FIT).",
+     "n": 27140,
+     "nMol": 200,
+     "property": false
+    }
+   ]
+  },
+  {
+   "id": "DP284",
+   "name": "DP284",
+   "title": "Dipole moments and polarizabilities (284 data)",
+   "blurb": "Hait and Head-Gordon's CCSD(T)/CBS benchmark of 152 dipole moments and 132 polarizabilities. Values are properties, not reaction energies.",
+   "refs": [
+    {
+     "text": "Hait, D.; Head-Gordon, M. J. Chem. Theory Comput. 2018, 14, 1969 (dipole moments).",
+     "url": "https://pubs.acs.org/doi/abs/10.1021/acs.jctc.7b01252"
+    },
+    {
+     "text": "Hait, D.; Head-Gordon, M. Phys. Chem. Chem. Phys. 2018, 20, 19800 (polarizabilities).",
+     "url": "https://pubs.rsc.org/en/content/articlelanding/2018/cp/c8cp03569e"
+    }
+   ],
+   "subsets": [
+    {
+     "id": "DP284__dip152",
+     "name": "dip152",
+     "category": "Dipole moments",
+     "description": "Dipole moments (in Debye) of 152 small molecules, CCSD(T) at the CBS limit.",
+     "n": 152,
+     "nMol": 152,
+     "property": true,
+     "fn": 93
+    },
+    {
+     "id": "DP284__dipNSP81",
+     "name": "dipNSP81",
+     "category": "Dipole moments",
+     "description": "The 81 non-spin-polarized (NSP) molecules of dip152; dipole moments in Debye.",
+     "n": 81,
+     "nMol": 81,
+     "property": true,
+     "fn": 93
+    },
+    {
+     "id": "DP284__dipSP71",
+     "name": "dipSP71",
+     "category": "Dipole moments",
+     "description": "The 71 spin-polarized (SP) molecules of dip152; dipole moments in Debye.",
+     "n": 71,
+     "nMol": 71,
+     "property": true,
+     "fn": 93
+    },
+    {
+     "id": "DP284__pol132",
+     "name": "pol132",
+     "category": "Polarizabilities",
+     "description": "Static polarizabilities (in Å³) of 132 small molecules, CCSD(T) at the CBS limit.",
+     "n": 132,
+     "nMol": 132,
+     "property": true,
+     "fn": 65
+    }
+   ]
+  },
+  {
+   "id": "MetalsEE",
+   "name": "Metals & EE",
+   "title": "Transition metals, actinides, and excitation energies",
+   "blurb": "Eight collections of transition-metal, actinide and p-block benchmarks.",
+   "refs": [],
+   "subsets": [
+    {
+     "id": "MetalsEE__3d_SSIP30",
+     "name": "3d_SSIP30",
+     "category": null,
+     "description": "Spin States and Ionization Potentials for first-row (3d) transition metals (30 data: 20SS + 10IP)",
+     "n": 30,
+     "nMol": 40,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__3d_SS20",
+     "name": "3d_SS20",
+     "category": null,
+     "description": "Spin States of 10 atoms and 10 cations",
+     "n": 20,
+     "nMol": 40,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__3d_IP10",
+     "name": "3d_IP10",
+     "category": null,
+     "description": "Ionization Potentials of 10 atoms",
+     "n": 10,
+     "nMol": 20,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__4d_SSIP24",
+     "name": "4d_SSIP24",
+     "category": null,
+     "description": "Spin States and Ionization Potentials for second-row (4d) transition metals (24 data: 16SS + 8IP)",
+     "n": 24,
+     "nMol": 32,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__4d_SS16",
+     "name": "4d_SS16",
+     "category": null,
+     "description": "Spin states of 8 atoms and 8 cations.",
+     "n": 16,
+     "nMol": 32,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__4d_IP8",
+     "name": "4d_IP8",
+     "category": null,
+     "description": "Ionization potentials of 8 atoms.",
+     "n": 8,
+     "nMol": 16,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__AIP28",
+     "name": "AIP28",
+     "category": null,
+     "description": "Ionization Potentials of 28 Actinides monoxides and dioxides (from Th to Cm).",
+     "n": 28,
+     "nMol": 41,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__LTMBH26",
+     "name": "LTMBH26",
+     "category": null,
+     "description": "Transition metals barrier heights of 26 reactions catalyzed by Au^(-), Pt^(-), and Ir^(-).",
+     "n": 26,
+     "nMol": 40,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__MOR41",
+     "name": "MOR41",
+     "category": null,
+     "description": "Metal-Organic Reactions catalyzed by first- and second-row transition metals.",
+     "n": 41,
+     "nMol": 95,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__Por21",
+     "name": "Por21",
+     "category": null,
+     "description": "Porphyrins database (11 Spin States and 10 Bond Energies)",
+     "n": 21,
+     "nMol": 32,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__PorSS11",
+     "name": "PorSS11",
+     "category": null,
+     "description": "Spin states of 3 Mn porphyrins, 1 Co porphyrin, and 7 Fe porphyrins.",
+     "n": 11,
+     "nMol": 17,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__PorBE10",
+     "name": "PorBE10",
+     "category": null,
+     "description": "Bond energies for iron porphyrin and iron porphyrin imidazole with N2, O2, and CO.",
+     "n": 10,
+     "nMol": 15,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__TMBH23",
+     "name": "TMBH23",
+     "category": null,
+     "description": "Transition metals barrier heights of 23 reactions catalyzed by Zr^(-), Re^(-), Mo^(-), and W^(-)",
+     "n": 23,
+     "nMol": 43,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__VR17",
+     "name": "VR17",
+     "category": null,
+     "description": "Valence and Rydberg excitations for p-block elements (2p, 3p, 4p).",
+     "n": 17,
+     "nMol": 34,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__V9",
+     "name": "V9",
+     "category": null,
+     "description": "Valence excitations.",
+     "n": 9,
+     "nMol": 18,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__R8",
+     "name": "R8",
+     "category": null,
+     "description": "Rydberg excitations.",
+     "n": 8,
+     "nMol": 16,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__V4",
+     "name": "V4",
+     "category": null,
+     "description": "Significant Subset of Valence excitations: B, Al+, Si+, and Ga.",
+     "n": 4,
+     "nMol": 8,
+     "property": false
+    },
+    {
+     "id": "MetalsEE__R4",
+     "name": "R4",
+     "category": null,
+     "description": "Significant Subset of Rydberg excitations: Ne, Cl, Ar, Br.",
+     "n": 4,
+     "nMol": 8,
+     "property": false
+    }
+   ]
+  },
+  {
+   "id": "SSSS",
+   "name": "SSSS",
+   "title": "Statistically Significant SubSets",
+   "blurb": "Small, statistically representative subsets of larger databases (MGCDB84, MOR41, MB08-165).",
+   "refs": [
+    {
+     "text": "Chan, B. J. Chem. Theory Comput. 2018, 14, 4254-4262.",
+     "url": "https://pubs.acs.org/doi/10.1021/acs.jctc.8b00514"
+    }
+   ],
+   "subsets": [
+    {
+     "id": "SSSS__MG8",
+     "name": "MG8",
+     "category": "Statistically significant subsets",
+     "description": "Statistically significant subset of MGCDB84.",
+     "n": 64,
+     "nMol": 134,
+     "property": false,
+     "fn": 203,
+     "fnTag": "DFT"
+    },
+    {
+     "id": "SSSS__MOR13",
+     "name": "MOR13",
+     "category": "Statistically significant subsets",
+     "description": "Statistically significant subset of MOR41 (Metals & EE).",
+     "n": 13,
+     "nMol": 37,
+     "property": false
+    },
+    {
+     "id": "SSSS__MB13",
+     "name": "MB13",
+     "category": "Statistically significant subsets",
+     "description": "Statistically significant subset of MB08-165 (GMTKN).",
+     "n": 13,
+     "nMol": 27,
+     "property": false,
+     "fn": 6,
+     "fnTag": "WFT"
+    }
+   ]
+  }
+ ],
+ "functionals": {
+  "GMTKN55": {
+   "file": "GMTKN55_Results.xlsx",
+   "count": 221
+  },
+  "MGCDB84": {
+   "file": "MGCDB84_Results.xlsx",
+   "count": 203
+  },
+  "Minnesota": {
+   "file": "MN2015B_Results.xlsx",
+   "count": 94
+  },
+  "DP284": {
+   "file": "ct7b01252_si_002.xlsx, supporting_information.xlsx",
+   "count": 93
+  },
+  "MB08-165": {
+   "file": "ct800511q_si_001.pdf",
+   "count": 6
+  },
+  "SSSS": {
+   "file": "derived from the MGCDB84 and MB08-165 results",
+   "count": 203
+  }
+ }
+}

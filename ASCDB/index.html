@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASCDB – A Small(er) Chemistry Database</title>
+<meta name="description" content="Browse, visualize in 3D and download the reference energies and geometries of ASCDB, a statistically representative computational chemistry benchmark database.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="./">ASC<span>DB</span></a>
+  <nav class="toplinks">
+    <a href="https://github.com/peverati/ASCDB">GitHub</a>
+    <a href="https://pubs.rsc.org/en/content/articlelanding/2019/cp/c9cp03211h">ASCDB paper</a>
+    <a href="https://peverati.github.io">Peverati group</a>
+  </nav>
+</div></div>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>A Small(er) Chemistry Database</h1>
+    <p>A statistically significant database for the evaluation and parametrization of electronic-structure methods, built from the three largest computational-chemistry databases (GMTKN55, MGCDB84 and Minnesota 2015B). Pick a group to inspect its reactions and reference energies, explore every molecule in 3D, and download the data.</p>
+    <p class="related">ASCDB is a distilled version of the <a href="https://peverati.github.io/ACCDB/">ACCDB collection</a>, where the full parent databases can be browsed.</p>
+    <p class="related" id="fnnote"></p>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <input id="q" class="search" type="search" placeholder="Search groups, e.g. NCA15, barrier, water, atomic energies…" autocomplete="off" aria-label="Search groups">
+  <div style="height:14px"></div>
+
+  <div id="dbs"><p class="empty">Loading…</p></div>
+
+  <section id="full" hidden>
+    <h2 class="sech">The full database</h2>
+    <p class="statnote">All 200 data points (350 geometries) of the 16 groups together. Download the reference energies and geometries, or see how exchange-correlation functionals perform on the whole database.</p>
+    <div class="toolbar">
+      <label class="inline">Units
+        <select class="btn" id="unit"><option value="kcal">kcal/mol</option><option value="kj">kJ/mol</option><option value="eh">Hartree (Eh)</option></select></label>
+      <div class="fnpick" id="fnpick" hidden></div>
+      <button class="btn primary" id="dlcsv">Download reference energies (.csv)</button>
+      <button class="btn primary" id="dlzip">Download structures (.zip)</button>
+    </div>
+    <section class="statsec" id="statsec" hidden></section>
+  </section>
+
+  <footer>
+    <p><b>How to cite.</b> If you use ASCDB, please cite: Morgante, P.; Peverati, R. <i>Phys. Chem. Chem. Phys.</i> <b>2019</b>, 21, 19092–19103.
+    <a href="https://doi.org/10.1039/C9CP03211H">doi:10.1039/C9CP03211H</a>. Credit to the authors of the parent databases is mandatory (listed above).</p>
+    <p>See also <a href="https://peverati.github.io/ACCDB/">ACCDB</a>, the full collection of chemistry databases. ASCDB is released under the GNU GPL license by Peverati's Theoretical and Computational Chemistry group (TCC@FIT). Structures are viewed with <a href="https://3dmol.csb.pitt.edu/">3Dmol.js</a>.</p>
+  </footer>
+</main>
+
+<script src="assets/jszip.min.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/fnpicker.js"></script>
+<script src="assets/stats.js"></script>
+<script>
+(async function () {
+  const idx = await loadJSON('data/index.json');
+  const db = idx.databases[0];
+  const FULL = 'ASCDB__ALL';                          // the whole database; it has no card of its own
+  const groups = db.subsets.filter(s => s.id !== FULL);
+  $('#stats').innerHTML =
+    stat(groups.length, 'groups') + stat(idx.nDataPoints, 'data points') + stat(idx.nGeometries.toLocaleString(), 'geometries');
+  const nfn = groups.filter(s => s.fn).length;
+  if (nfn) $('#fnnote').innerHTML = `Every group (tagged <span class="tag inline">DFT</span>) comes with the errors of ${Math.max(...Object.values(idx.functionals).map(f => f.count))} exchange-correlation functionals, which you can add as table columns.`;
+
+  function render(filter) {
+    const f = filter.trim().toLowerCase();
+    const subs = groups.filter(s => !f || (s.name + ' ' + (s.category || '') + ' ' + (s.description || '')).toLowerCase().includes(f));
+    const cats = new Map();
+    subs.forEach(s => { const c = s.category || ''; if (!cats.has(c)) cats.set(c, []); cats.get(c).push(s); });
+    let html = `<section class="db"><h2>${esc(db.name)}</h2><div class="title">${esc(db.title)}</div><p class="blurb">${esc(db.blurb)}</p>`;
+    if (db.refs.length) html += `<ul class="refs">${db.refs.map(r => `<li><a href="${esc(r.url)}">${esc(r.text)}</a></li>`).join('')}</ul>`;
+    for (const [c, list] of cats) {
+      html += `<div class="cat">${esc(c)}</div><div class="grid">` + list.map(s =>
+        `<a class="card" href="subset.html?id=${encodeURIComponent(s.id)}" title="${esc(s.description || '')}">${s.fn ? `<span class="tag" title="Results of ${s.fn} DFT functionals available">DFT</span>` : ''}<b>${esc(s.name)}</b><small>${s.n.toLocaleString()} reactions · ${s.nMol.toLocaleString()} molecules</small></a>`).join('') + '</div>';
+    }
+    $('#dbs').innerHTML = subs.length ? html + '</section>' : '<p class="empty">No group matches your search.</p>';
+  }
+  function stat(n, label) { return `<div class="stat"><b>${n}</b><span>${label}</span></div>`; }
+  render('');
+  $('#q').addEventListener('input', e => render(e.target.value));
+
+  /* ------------------------------------------------ the full database: downloads and statistics */
+  const UNITS = { kcal: ['kcal/mol', 2], kj: ['kJ/mol', 2], eh: ['Hartree (Eh)', 6] };
+  const FACTOR = { kcal: 1, kj: 4.184, eh: 1 / 627.5094740631 };
+  let unit = 'kcal', sel = [];
+  const decs = () => UNITS[unit][1];
+  const SAVED = 'ascdb.functionals';
+  const S = await loadJSON('data/subsets/' + FULL + '.json');
+  $('#full').hidden = false;
+
+  $('#dlcsv').onclick = () => {
+    const q = v => /[",\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v;
+    const lines = S.reactions.map(r => [r.id, ...r.terms.flatMap(([c, m]) => [c, m]), r.ref[unit]].map(x => q(String(x))).join(','));
+    download(`ASCDB_reference_${({ kcal: 'kcal', kj: 'kJ', eh: 'Eh' })[unit]}.csv`, new Blob([lines.join('\n') + '\n'], { type: 'text/csv' }));
+  };
+  $('#dlzip').onclick = async e => {
+    const btn = e.currentTarget, label = btn.textContent;
+    btn.disabled = true;
+    try {
+      const zip = new JSZip(), dir = zip.folder('ASCDB_structures');
+      const files = [...new Set(S.molecules.map(m => m.file).filter(Boolean))];
+      let done = 0;
+      for (let i = 0; i < files.length; i += 16) {
+        await Promise.all(files.slice(i, i + 16).map(async f => { dir.file(f + '.xyz', await loadXYZ(f)); btn.textContent = `Preparing… ${++done}/${files.length}`; }));
+      }
+      dir.file('CITATION.txt', 'ASCDB: A Small(er) Chemistry Database\n\nPlease cite the ASCDB database:\n- Morgante, P.; Peverati, R. Phys. Chem. Chem. Phys. 2019, 21, 19092-19103.\n  https://doi.org/10.1039/C9CP03211H\n\nand the original work(s):\n' +
+        db.refs.slice(1).map(r => `- ${r.text}\n  ${r.url}`).join('\n') + '\n\nThe second line of each xyz file holds "charge multiplicity".\n');
+      download('ASCDB_structures.zip', await zip.generateAsync({ type: 'blob', compression: 'DEFLATE' }));
+    } catch (err) { alert('Could not build the archive: ' + err.message); }
+    btn.textContent = label; btn.disabled = false;
+  };
+
+  if (!S.fn) return;
+  const FD = (await loadJSON('data/functionals/' + FULL + '.json')).F;
+  const mue = {};
+  for (const [n, arr] of Object.entries(FD)) { let a = 0, c = 0; for (const v of arr) if (v != null) { a += Math.abs(v); c++; } mue[n] = a / c; }
+  try { sel = (JSON.parse(localStorage.getItem(SAVED)) || []).filter(n => FD[n]); } catch (e) { sel = []; }
+  function setSel(next) {
+    sel = next;
+    try { localStorage.setItem(SAVED, JSON.stringify(sel)); } catch (e) {}
+    picker.refresh(); StatsUI.refresh();
+  }
+  const picker = FnPicker.mount($('#fnpick'), {
+    names: Object.keys(FD), mue: n => mue[n],
+    factor: () => FACTOR[unit], decs, unitLabel: () => UNITS[unit][0],
+    getSel: () => sel,
+    onToggle: (n, on) => setSel(on ? [...sel.filter(x => x !== n), n] : sel.filter(x => x !== n)),
+    onClear: () => setSel([]),
+    footer: `Selected functionals are the ones listed under "Selected" in the statistics below, and become columns on the group pages. Errors are calculated − reference. Source: ${esc(S.fnSource || '')}. ${esc(S.fnNote || '')}`,
+  });
+  // the groups, for the "MUE of each group" plot in the detail dialog
+  const label = r => r.id.slice(0, r.id.lastIndexOf('_'));
+  const names = [...new Set(S.reactions.map(label))];
+  StatsUI.mount({
+    S, FD,
+    groups: { names, ids: names.map(n => 'ASCDB__' + n), idx: S.reactions.map(r => names.indexOf(label(r))) },
+    heading: 'Statistics', where: 'on the whole of ASCDB', groupWord: 'group',
+    tickHint: 'Tick the box to select a functional; selected functionals become columns on the group pages.',
+    get unit() { return unit; },
+    factor: () => FACTOR[unit], decs, unitLabel: () => UNITS[unit][0],
+    isSel: n => sel.includes(n),
+    toggle: (n, on) => setSel(on ? [...sel.filter(x => x !== n), n] : sel.filter(x => x !== n)),
+  });
+  $('#unit').onchange = e => { unit = e.target.value; picker.refresh(); StatsUI.refresh(); };
+})().catch(e => { $('#dbs').innerHTML = `<p class="empty">Could not load data (${esc(e.message)}). If you opened this file directly, serve the folder over HTTP, e.g. <code>python3 -m http.server</code>.</p>`; });
+</script>
+</body>
+</html>

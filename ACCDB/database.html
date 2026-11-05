@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ACCDB database</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="./">ACC<span>DB</span></a>
+  <nav class="toplinks">
+    <a href="./">All databases</a>
+    <a href="https://github.com/peverati/ACCDB">GitHub</a>
+    <a href="https://peverati.github.io">Peverati group</a>
+  </nav>
+</div></div>
+
+<main class="wrap" id="main"><p class="empty">Loading…</p></main>
+
+<script src="assets/app.js"></script>
+<script src="assets/fnpicker.js"></script>
+<script src="assets/stats.js"></script>
+<script>
+(async function () {
+  const id = new URLSearchParams(location.search).get('id');
+  const idx = await loadJSON('data/index.json');
+  const db = idx.databases.find(d => d.id === id);
+  if (!db) throw new Error('unknown database');
+  document.title = `${db.name} – ACCDB`;
+
+  const UNITS = { kcal: ['kcal/mol', 2], kj: ['kJ/mol', 2], eh: ['Hartree (Eh)', 6] };
+  const FACTOR = { kcal: 1, kj: 4.184, eh: 1 / 627.5094740631 };
+  let unit = 'kcal', sel = [];
+  const decs = () => UNITS[unit][1];
+  const SAVED = 'accdb.functionals';
+  const nReact = db.subsets.reduce((a, s) => a + s.n, 0);
+  const hasFn = !!db.fnSubsets;
+
+  const refs = db.refs.length ? `<div class="article"><b>Original article${db.refs.length > 1 ? 's' : ''}</b><ul>${db.refs.map(r => `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.text)}</a></li>`).join('')}</ul></div>` : '';
+
+  $('#main').innerHTML = `
+    <div class="crumbs"><a href="./">ACCDB</a> / ${esc(db.name)}</div>
+    <section class="sub-head">
+      <h1>${esc(db.name)}</h1>
+      <p class="desc">${esc(db.title)}</p>
+      <p class="desc muted">${esc(db.blurb)}</p>
+      <div class="meta">${db.subsets.length} subset${db.subsets.length === 1 ? '' : 's'} · ${nReact.toLocaleString()} reference data${db.subsets.some(x => x.fn) ? ` · functional results for ${db.subsets.filter(x => x.fn).length} subsets` : ''}</div>
+      ${refs}
+      ${hasFn ? `<div class="toolbar">
+        <label class="inline">Units
+          <select class="btn" id="unit"><option value="kcal">kcal/mol</option><option value="kj">kJ/mol</option><option value="eh">Hartree (Eh)</option></select></label>
+        <div class="fnpick" id="fnpick" hidden></div>
+      </div>` : ''}
+    </section>
+
+    <h2 class="sech">Subsets</h2>
+    <input class="search" id="q" type="search" placeholder="Search the subsets of ${esc(db.name)}…" autocomplete="off" aria-label="Search subsets">
+    <div id="subsets"></div>
+
+    <section class="statsec" id="statsec" hidden></section>
+  `;
+
+  function renderSubsets(filter) {
+    const f = filter.trim().toLowerCase();
+    const subs = db.subsets.filter(s => !f || (s.name + ' ' + (s.category || '') + ' ' + (s.description || '')).toLowerCase().includes(f));
+    const cats = new Map();
+    subs.forEach(s => { const c = s.category || ''; if (!cats.has(c)) cats.set(c, []); cats.get(c).push(s); });
+    let html = '';
+    for (const [c, list] of cats) {
+      html += c ? `<div class="cat">${esc(c)}</div>` : '<div style="height:14px"></div>';
+      html += '<div class="grid">' + list.map(s =>
+        `<a class="card" href="subset.html?id=${encodeURIComponent(s.id)}" title="${esc(s.description || '')}">${s.fn ? `<span class="tag" title="Results of ${s.fn} ${s.fnTag === 'WFT' ? 'wavefunction methods' : 'methods (DFT functionals)'} available">${s.fnTag || 'DFT'}</span>` : ''}<b>${esc(s.name)}</b><small>${s.n.toLocaleString()} ${s.property ? 'values' : 'reactions'} · ${s.nMol.toLocaleString()} molecules</small></a>`).join('') + '</div>';
+    }
+    $('#subsets').innerHTML = subs.length ? html : '<p class="empty">No subset matches your search.</p>';
+  }
+  renderSubsets('');
+  $('#q').addEventListener('input', e => renderSubsets(e.target.value));
+  if (!hasFn) return;
+
+  /* ------------------------------------------------ overall statistics */
+  const D = await loadJSON('data/dbfunc/' + encodeURIComponent(db.id) + '.json');
+  const FD = D.F;
+  const reactions = D.ids.map((rid, i) => ({ id: rid, ref: { kcal: D.ref[i], kj: D.ref[i] * FACTOR.kj, eh: D.ref[i] * FACTOR.eh } }));
+  const mue = {};
+  for (const [n, arr] of Object.entries(FD)) { let a = 0, c = 0; for (const v of arr) if (v != null) { a += Math.abs(v); c++; } mue[n] = a / c; }
+  try { sel = (JSON.parse(localStorage.getItem(SAVED)) || []).filter(n => FD[n]); } catch (e) { sel = []; }
+  function setSel(next) {
+    sel = next;
+    try { localStorage.setItem(SAVED, JSON.stringify(sel)); } catch (e) {}
+    picker.refresh(); StatsUI.refresh();
+  }
+  const picker = FnPicker.mount($('#fnpick'), {
+    names: Object.keys(FD), mue: n => mue[n],
+    factor: () => FACTOR[unit], decs, unitLabel: () => UNITS[unit][0],
+    getSel: () => sel,
+    onToggle: (n, on) => setSel(on ? [...sel.filter(x => x !== n), n] : sel.filter(x => x !== n)),
+    onClear: () => setSel([]),
+    footer: `Selected functionals are the ones listed under "Selected" in the statistics below, and become columns on the subset pages. Errors are calculated − reference, in the sign convention of the reference energies. The list shows the MUE over all ${D.ids.length.toLocaleString()} data points with results.`,
+  });
+  StatsUI.mount({
+    S: { name: db.name, reactions }, FD,
+    groups: { names: D.subs.map(s => s.name), ids: D.subs.map(s => s.id), idx: D.sub },
+    heading: 'Overall statistics', where: `over the whole of ${db.name}`,
+    tickHint: 'Tick the box to select a functional; selected functionals become columns on the subset pages.',
+    get unit() { return unit; },
+    factor: () => FACTOR[unit], decs, unitLabel: () => UNITS[unit][0],
+    isSel: n => sel.includes(n),
+    toggle: (n, on) => setSel(on ? [...sel.filter(x => x !== n), n] : sel.filter(x => x !== n)),
+  });
+  $('#unit').onchange = e => { unit = e.target.value; picker.refresh(); StatsUI.refresh(); };
+})().catch(e => {
+  $('#main').innerHTML = `<p class="empty">Could not load this page (${esc(e.message)}).<br><a href="./">← Back to all databases</a></p>`;
+});
+</script>
+</body>
+</html>

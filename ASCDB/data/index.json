@@ -1,0 +1,208 @@
+{
+ "nGeometries": 350,
+ "nDataPoints": 200,
+ "databases": [
+  {
+   "id": "ASCDB",
+   "name": "ASCDB",
+   "title": "A Small(er) Chemistry Database",
+   "blurb": "A statistically representative database of 200 data points (350 geometries) distilled from GMTKN55, MGCDB84 and Minnesota 2015B, organised in 16 groups of chemical environments.",
+   "refs": [
+    {
+     "text": "Morgante, P.; Peverati, R. Phys. Chem. Chem. Phys. 2019, 21, 19092-19103 (the ASCDB database).",
+     "url": "https://pubs.rsc.org/en/content/articlelanding/2019/cp/c9cp03211h"
+    },
+    {
+     "text": "GMTKN55: Goerigk, L.; Hansen, A.; Bauer, C.; Ehrlich, S.; Najibi, A.; Grimme, S. Phys. Chem. Chem. Phys. 2017, 19, 32184-32215.",
+     "url": "http://pubs.rsc.org/en/Content/ArticleLanding/2017/CP/C7CP04913G"
+    },
+    {
+     "text": "MGCDB84: Mardirossian, N.; Head-Gordon, M. Mol. Phys. 2017, 115, 2315-2372.",
+     "url": "https://www.tandfonline.com/doi/abs/10.1080/00268976.2017.1333644"
+    },
+    {
+     "text": "Minnesota 2015B: Yu, H.; He, X.; Truhlar, D. G. Chem. Sci. 2016, 7, 5032.",
+     "url": "http://pubs.rsc.org/en/content/articlelanding/2016/sc/c6sc00705h"
+    }
+   ],
+   "subsets": [
+    {
+     "id": "ASCDB__ALL",
+     "name": "ASCDB",
+     "category": "Full database",
+     "description": "The complete ASCDB: all 200 data points of the 16 groups, requiring 350 single-point calculations.",
+     "n": 200,
+     "nMol": 350,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__NCA15",
+     "name": "NCA15",
+     "category": "Non-Covalent",
+     "description": "Non-Covalent: A (15 data points).",
+     "n": 15,
+     "nMol": 33,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__NCB21",
+     "name": "NCB21",
+     "category": "Non-Covalent",
+     "description": "Non-Covalent: B (21 data points).",
+     "n": 21,
+     "nMol": 53,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__NCC21",
+     "name": "NCC21",
+     "category": "Non-Covalent",
+     "description": "Non-Covalent: Cluster (21 data points).",
+     "n": 21,
+     "nMol": 52,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__NCW3",
+     "name": "NCW3",
+     "category": "Non-Covalent",
+     "description": "Non-Covalent: Water (3 data points).",
+     "n": 3,
+     "nMol": 6,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__TARE19",
+     "name": "TARE19",
+     "category": "Thermochemistry",
+     "description": "Thermochemistry: Atomization and Reaction Energies (19 data points).",
+     "n": 19,
+     "nMol": 43,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__TBHA20",
+     "name": "TBHA20",
+     "category": "Thermochemistry",
+     "description": "Thermochemistry: Barrier Heights A (20 data points).",
+     "n": 20,
+     "nMol": 45,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__TBHB16",
+     "name": "TBHB16",
+     "category": "Thermochemistry",
+     "description": "Thermochemistry: Barrier Heights B (16 data points).",
+     "n": 16,
+     "nMol": 52,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__THR5",
+     "name": "THR5",
+     "category": "Thermochemistry",
+     "description": "Thermochemistry: Hydrocarbons Reactions (5 data points).",
+     "n": 5,
+     "nMol": 8,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__NLMA15",
+     "name": "NLMA15",
+     "category": "Non-Local Effects",
+     "description": "Non-Local Effects: Mixed A (15 data points).",
+     "n": 15,
+     "nMol": 35,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__NLMB7",
+     "name": "NLMB7",
+     "category": "Non-Local Effects",
+     "description": "Non-Local Effects: Mixed B (7 data points).",
+     "n": 7,
+     "nMol": 14,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__NLMR11",
+     "name": "NLMR11",
+     "category": "Non-Local Effects",
+     "description": "Non-Local Effects: Multi-Reference (11 data points).",
+     "n": 11,
+     "nMol": 29,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__NLSIE9",
+     "name": "NLSIE9",
+     "category": "Non-Local Effects",
+     "description": "Non-Local Effects: Self-Interaction Error (9 data points).",
+     "n": 9,
+     "nMol": 29,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__UMBA8",
+     "name": "UMBA8",
+     "category": "Unbiased Calculations",
+     "description": "Unbiased Calculations: Mindless Benchmarks A (8 data points).",
+     "n": 8,
+     "nMol": 23,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__UMBB5",
+     "name": "UMBB5",
+     "category": "Unbiased Calculations",
+     "description": "Unbiased Calculations: Mindless Benchmarks B (5 data points).",
+     "n": 5,
+     "nMol": 20,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__UMBC7",
+     "name": "UMBC7",
+     "category": "Unbiased Calculations",
+     "description": "Unbiased Calculations: Mindless Benchmarks C (7 data points).",
+     "n": 7,
+     "nMol": 23,
+     "property": false,
+     "fn": 61
+    },
+    {
+     "id": "ASCDB__UAE18",
+     "name": "UAE18",
+     "category": "Unbiased Calculations",
+     "description": "Unbiased Calculations: Atomic Energies per Electron (18 data points).",
+     "n": 18,
+     "nMol": 18,
+     "property": false,
+     "fn": 61
+    }
+   ]
+  }
+ ],
+ "functionals": {
+  "ASCDB": {
+   "file": "ASCDB_QZVP.xlsx, ASCDB_TZVPD.xlsx",
+   "count": 61
+  }
+ }
+}
