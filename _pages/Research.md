@@ -24,6 +24,7 @@ We are focused primarily in developing affordable computational methods with goo
 
 # Philosophy of Science
 A recent interest of our group is the philosophy of science and education in chemistry. On this line of research, we focus on three important areas of the philosophy of chemistry:
+
 - The importance of models and simulations, and their relations with experiment and reality.
 - Symmetry breaking and the emergence of complexity.
 - Emergent properties in simulations.
