@@ -2,7 +2,8 @@
    Plain SVG, no libraries. Colours come from CSS variables (see style.css, "statistics"):
    one hue (--c-series) for single-series charts, blue/red (--c-neg / --c-pos) for the sign of an error. */
 const StatsUI = (() => {
-  let ctx, base = [], rows = [], sortKey = 'mue', sortDir = 1, scope = 'all', axisIdx = -1;   // axisIdx -1: automatic axis range
+  let ctx, base = [], rows = [], sortKey = 'mue', sortDir = 1, scope = 'all', axisIdx = -1, statKey = 'mue';   // axisIdx -1: automatic axis range; statKey: statistic printed right of the violins
+  const STAT_NAMES = { mue: 'MUE', mse: 'MSE', rmse: 'RMSE', sd: 'SD', max: 'Max |error|' };
   const AXIS_OPTS = { kcal: [1, 2, 5, 10, 20], kj: [5, 10, 20, 50, 100], eh: [0.001, 0.002, 0.005, 0.01, 0.03], native: [0.1, 0.2, 0.5, 1, 2] };   // +- values offered per unit
   let modal, tip, current = null, order = [];
   const NS = 'http://www.w3.org/2000/svg';
@@ -49,7 +50,7 @@ const StatsUI = (() => {
       <div class="chartcard">
         <div class="charthead"><div class="charttitle" id="st-bartitle"></div>
           <div class="axisctl"><span>Axis ±</span><span class="seg" id="st-axis" title="Range of the horizontal axis"></span></div></div>
-        <div id="st-bars"></div></div>
+        <div class="chartwrap"><select class="statsel" id="st-stat" aria-label="Statistic shown right of the violins" title="Statistic shown right of the violins"></select><div id="st-bars"></div></div></div>
       <div class="tablewrap stattable"><table>
         <thead><tr id="st-head"></tr></thead><tbody id="st-body"></tbody></table></div>`;
     sec.addEventListener('click', e => {
@@ -64,6 +65,7 @@ const StatsUI = (() => {
       const tr = e.target.closest('tr[data-name]');
       if (tr && !e.target.closest('label')) open(tr.dataset.name);
     });
+    sec.addEventListener('change', e => { if (e.target.id === 'st-stat') { statKey = e.target.value; drawBars(); } });
     sec.addEventListener('keydown', e => {
       if (e.key === 'Enter' && e.target.matches('tr[data-name]')) open(e.target.dataset.name);
     });
@@ -97,6 +99,8 @@ const StatsUI = (() => {
   }
 
   function drawBars() {
+    $$('#st-stat').innerHTML = Object.entries(STAT_NAMES).map(([k, n]) => `<option value="${k}">${n} (${ctx.unitLabel()})</option>`).join('');
+    $$('#st-stat').value = statKey;
     const list = [...rows].sort((a, b) => a.mue - b.mue).slice(0, scope === 'sel' ? 25 : 20);
     const opts = AXIS_OPTS[ctx.unit];
     $$('#st-axis').innerHTML = `<button data-axis="-1" class="${axisIdx < 0 ? 'on' : ''}" title="Follow the data, at most ±10 kcal/mol">Auto</button>` +
@@ -197,9 +201,9 @@ const StatsUI = (() => {
   function violins(host, items) {
     host.textContent = '';
     if (!items.length) return;
-    const W = Math.max(300, host.clientWidth || 640), pitch = 36, top = 8, axisH = 38;
+    const W = Math.max(300, host.clientWidth || 640), pitch = 36, top = 24, axisH = 38, mueW = 52;   // mueW: column on the right for the MUE
     const maxLabel = Math.max(...items.map(i => i.label.length));
-    const labW = Math.min(Math.round(W * 0.34), Math.round(maxLabel * 6.6 + 12)), L = labW + 12, R = W - 14;
+    const labW = Math.min(Math.round(W * 0.34), Math.round(maxLabel * 6.6 + 12)), L = labW + 12, R = W - 14 - mueW;
     // Shared axis, centred on zero. It follows the data (pooled 0.5th-99.5th percentile) but never exceeds
     // +-10 kcal/mol, so outliers cannot squash every violin; values beyond the axis get an arrow.
     const pooled = items.flatMap(i => i.vals).sort((a, b) => a - b);
@@ -247,6 +251,7 @@ const StatsUI = (() => {
       if (v[n - 1] > hi) svg.appendChild(el('path', { d: `M${R - 1},${cy}l-7,-5v10z`, class: 'more' }));
       const lab = it.label.length * 6.6 + 12 > labW ? it.label.slice(0, Math.max(3, Math.floor((labW - 12) / 6.6) - 1)) + '…' : it.label;
       svg.appendChild(el('text', { x: labW, y: cy + 4, 'text-anchor': 'end', class: 'tx' }, esc(lab)));
+      svg.appendChild(el('text', { x: W - 4, y: cy + 4, 'text-anchor': 'end', class: 'tx val' }, (statKey === 'mse' ? (it.r.mse > 0 ? '+' : '') : '') + (it.r[statKey] * f()).toFixed(d())));   // chosen statistic, right of the violin
       const u = ctx.unitLabel(), g = k => (+k).toFixed(d());
       tips.push({ click: it.click, tip: [it.label, `MUE ${g(it.r.mue * f())} ${u}`, `median ${g(med)}, mean ${g(mean)} ${u}`, `middle half ${g(q1)} to ${g(q3)}`, `range ${g(v[0])} to ${g(v[n - 1])}${out ? ` (${out} beyond the axis)` : ''}`, `n = ${n}`] });
       svg.appendChild(el('rect', { x: 0, y: cy - pitch / 2, width: W, height: pitch, class: 'hit', 'data-t': i, tabindex: 0 }));

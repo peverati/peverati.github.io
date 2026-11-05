@@ -271,3 +271,7 @@ svg .more { fill: var(--muted); }
 .toplinks { align-items: center; }
 .logo-link { display: flex; }
 .logo-link img { height: 30px; width: auto; display: block; }
+
+.chartwrap { position: relative; }
+.statsel { position: absolute; top: 0; right: 0; z-index: 2; max-width: 60%; font: inherit; font-size: .8rem; padding: 2px 6px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+.statsel:hover, .statsel:focus { border-color: var(--accent); outline: none; }
