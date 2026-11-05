@@ -10,7 +10,7 @@ header:
   overlay_filter: 0.5  
 ---
 
-**Office hours:** M&F 2-4PM.
+**Office hours:** MWF 12-1PM.
 
 ## P-Chem 1 (CHM 3001):
 The textbook for the physical chemistry 1 course is available [HERE](https://peverati.github.io/pchem1)
