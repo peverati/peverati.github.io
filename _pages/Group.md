@@ -21,13 +21,12 @@ header:
 - Dr. Roberto Peverati - [about](/About/)
 
 ## Graduate Students: 
-- Dorothea Illner - M.S. student [email](dillner2022@my.fit.edu)
-
-## Undergraduate Students: 
+- Matija Savovic [email](mailto:msavovic2026@my.fit.edu)
 
 ## Alumni:
-- Pierpaolo Morgante (Ph.D. 2022) - Currently Scientific Editor @ IOp Science [email](mailto:pmorgante2017@go.fit.edu)
-- Tegla Jones - Currently Ph.D. Student @ Tokyo Tech [email](mailto:tjones2018@my.fit.edu)
+- Dorothea Illner (M.S. 2024) - Currently Ph.D. student at Purdue University
+- Pierpaolo Morgante (Ph.D. 2022) - Currently Scientific Editor at the Royal Society of Chemistry
+- Tegla Jones - Currently Ph.D. Student @ Tokyo Tech
 
 
 
@@ -50,6 +49,4 @@ If you are a group member that has access to any of these machines, please use t
 Note: In all our machines hyperthreading is turned OFF by default (our own benchmarks indicate that is convenient to do so).
 
 ## Florida Tech Computational Facilities:
-- [Blueshark](https://services.fit.edu/it_faq/content/39/350/en/what-is-the-blueshark-cluster.html)
-
-Note: On all FIT shared machines hyperthreading is turned ON, which means that for proper efficiency for quantum chemistry calculations, we should request twice the amount of threads than those used effectively by the QC engine (Gaussian, Q-Chem), and voluntarily leave half of them empty. A good strategy is to request an entire node in the submission script (12 threads on Blueshark), and use only half of its threads in the QC engine (Nproc=6 or -nt 6).
+- [ai.panther](https://research.fit.edu/craft/aipanther/)
