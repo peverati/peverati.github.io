@@ -268,3 +268,6 @@ svg .more { fill: var(--muted); }
 .charthead { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
 .charthead .charttitle { flex: 1 1 380px; }
 .axisctl { display: flex; align-items: center; gap: 8px; font-size: .8rem; color: var(--muted); white-space: nowrap; }
+.toplinks { align-items: center; }
+.logo-link { display: flex; }
+.logo-link img { height: 30px; width: auto; display: block; }
