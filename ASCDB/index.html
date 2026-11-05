@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ASCDB – A Small(er) Chemistry Database</title>
 <meta name="description" content="Browse, visualize in 3D and download the reference energies and geometries of ASCDB, a statistically representative computational chemistry benchmark database.">
-<link rel="stylesheet" href="assets/style.css?v=20251108">
+<link rel="stylesheet" href="assets/style.css?v=20251110">
 </head>
 <body>
 <div class="topbar"><div class="wrap">
@@ -40,6 +40,7 @@
       <div class="fnpick" id="fnpick" hidden></div>
       <button class="btn primary" id="dlcsv">Download reference energies (.csv)</button>
       <button class="btn primary" id="dlzip">Download structures (.zip)</button>
+      <button class="btn" id="dlinp">Download input files…</button>
     </div>
     <section class="statsec" id="statsec" hidden></section>
   </section>
@@ -52,9 +53,10 @@
 </main>
 
 <script src="assets/jszip.min.js"></script>
-<script src="assets/app.js?v=20251108"></script>
-<script src="assets/fnpicker.js?v=20251108"></script>
-<script src="assets/stats.js?v=20251108"></script>
+<script src="assets/app.js?v=20251110"></script>
+<script src="assets/fnpicker.js?v=20251110"></script>
+<script src="assets/stats.js?v=20251110"></script>
+<script src="assets/inputs.js?v=20251110"></script>
 <script>
 (async function () {
   const idx = await loadJSON('data/index.json');
@@ -97,6 +99,9 @@
     const lines = S.reactions.map(r => [r.id, ...r.terms.flatMap(([c, m]) => [c, m]), r.ref[unit]].map(x => q(String(x))).join(','));
     download(`ASCDB_reference_${({ kcal: 'kcal', kj: 'kJ', eh: 'Eh' })[unit]}.csv`, new Blob([lines.join('\n') + '\n'], { type: 'text/csv' }));
   };
+  $('#dlinp').onclick = () => InputFiles.open({ mols: S.molecules, title: 'ASCDB (all groups)', zipName: 'ASCDB_inputs',
+    cite: 'ASCDB: A Small(er) Chemistry Database\n\nPlease cite the ASCDB database:\n- Morgante, P.; Peverati, R. Phys. Chem. Chem. Phys. 2019, 21, 19092-19103.\n  https://doi.org/10.1039/C9CP03211H\n\nand the original work(s):\n' + db.refs.slice(1).map(r => `- ${r.text}\n  ${r.url}`).join('\n') + '\n' });
+
   $('#dlzip').onclick = async e => {
     const btn = e.currentTarget, label = btn.textContent;
     btn.disabled = true;

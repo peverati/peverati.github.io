@@ -275,3 +275,20 @@ svg .more { fill: var(--muted); }
 .chartwrap { position: relative; }
 .statsel { position: absolute; top: 0; right: 0; z-index: 2; max-width: 60%; font: inherit; font-size: .8rem; padding: 2px 6px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
 .statsel:hover, .statsel:focus { border-color: var(--accent); outline: none; }
+
+/* input-file dialog */
+.statpanel header .x, button.x { font: inherit; font-size: 1.5rem; line-height: 1; border: 0; background: none; color: var(--muted); cursor: pointer; padding: 0 6px; }
+.inp-row { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: flex-end; margin: 6px 0 12px; }
+.inp-row label, .inp-kwl { display: flex; flex-direction: column; gap: 4px; font-size: .78rem; color: var(--muted); }
+.inp-row label.inp-chk { justify-content: flex-end; }
+.inp-row label.inp-chk[hidden] { display: none; }
+.inp-chk span { font-size: .9rem; color: var(--ink); padding: 8px 0; }
+.inp-num { width: 90px; }
+.inp-kw { width: 100%; min-height: 120px; resize: vertical; font-family: var(--mono); font-size: .85rem; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+.inp-note { color: var(--muted); font-size: .8rem; margin: 8px 0; }
+.inp-warn { border: 1px solid var(--c-pos); border-radius: 10px; padding: 8px 12px; font-size: .82rem; margin: 8px 0; color: var(--ink); }
+.inp-warn[hidden] { display: none; }
+.inp-pvh { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: space-between; }
+.inp-pvh select { max-width: 100%; }
+.inp-prev { max-height: 300px; overflow: auto; background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-family: var(--mono); font-size: .78rem; white-space: pre; margin: 6px 0 12px; }
+.inp-foot { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }

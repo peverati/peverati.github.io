@@ -78,6 +78,7 @@ const Viewer = (() => {
         <button class="btn" id="vlabels">Labels</button>
         <button class="btn" id="vreset">Reset view</button>
         <button class="btn" id="vtxt">View .xyz</button>
+        <button class="btn" id="vinp" title="Q-Chem, ORCA or Gaussian input file">Input file…</button>
         <button class="btn primary" id="vdl">Download .xyz</button>
         <span class="hint">drag to rotate · scroll to zoom · shift-drag to move</span>
       </div>`;
@@ -99,6 +100,7 @@ const Viewer = (() => {
     $('#vreset', dock).onclick = () => { viewer.zoomTo(); viewer.render(); };
     $('#vtxt', dock).onclick = () => setText(!dock.classList.contains('showtext'));
     $('#vdl', dock).onclick = () => { if (current) download(current.file + '.xyz', new Blob([current.text], { type: 'chemical/x-xyz' })); };
+    $('#vinp', dock).onclick = () => { if (current && typeof InputFiles !== 'undefined') InputFiles.open({ mols: [{ name: selected, file: current.file }], title: selected, single: true }); };
     window.addEventListener('resize', refresh);
   }
 
@@ -193,7 +195,7 @@ const Viewer = (() => {
       message('');
       refresh();
     } catch (e) { current = null; message('Could not display this structure.'); return; }
-    const cm = (text.trim().split(/\r?\n/)[1] || '').trim().split(/\s+/);
+    const cm = ((/^\s*([+-]?\d+)[\s,]+([+-]?\d+)\s*$/.exec(text.split(/\r?\n/)[1] || '') || []).slice(1)).map(x => String(parseInt(x, 10)));
     const atoms = viewer.getModel().selectedAtoms({});
     let info = `${formula(atoms)} · ${atoms.length} atoms`;
     if (cm.length === 2 && cm.every(x => /^-?\d+$/.test(x))) info += ` · charge ${cm[0]} · mult. ${cm[1]}`;

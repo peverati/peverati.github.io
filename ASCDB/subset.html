@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ASCDB group</title>
-<link rel="stylesheet" href="assets/style.css?v=20251108">
+<link rel="stylesheet" href="assets/style.css?v=20251110">
 </head>
 <body>
 <div class="topbar"><div class="wrap">
@@ -20,9 +20,10 @@
 
 <script src="assets/3Dmol-min.js"></script>
 <script src="assets/jszip.min.js"></script>
-<script src="assets/app.js?v=20251108"></script>
-<script src="assets/fnpicker.js?v=20251108"></script>
-<script src="assets/stats.js?v=20251108"></script>
+<script src="assets/app.js?v=20251110"></script>
+<script src="assets/fnpicker.js?v=20251110"></script>
+<script src="assets/stats.js?v=20251110"></script>
+<script src="assets/inputs.js?v=20251110"></script>
 <script>
 (async function () {
   const id = new URLSearchParams(location.search).get('id');
@@ -67,6 +68,7 @@
         <button class="btn primary" id="dlcsv">Download reference energies (.csv)</button>
         <button class="btn" id="dlfn" hidden>Download functional results (.csv)</button>
         <button class="btn primary" id="dlzip">Download structures (.zip)</button>
+        <button class="btn" id="dlinp">Download input files…</button>
       </div>
     </section>
     <div class="tabs" role="tablist">
@@ -228,6 +230,11 @@
     download(`${S.name}_reference${suffix}.csv`, new Blob([lines.join('\n') + '\n'], { type: 'text/csv' }));
   };
 
+  const citeText = `ASCDB group ${S.name} (${S.dbTitle})\n\nPlease cite the original work(s):\n` +
+    S.refs.map(r => `- ${r.text}\n  ${r.url}`).join('\n') +
+    `\n\nand the ASCDB database:\n- Morgante, P.; Peverati, R. Phys. Chem. Chem. Phys. 2019, 21, 19092-19103.\n  https://doi.org/10.1039/C9CP03211H\n`;
+  $('#dlinp').onclick = () => InputFiles.open({ mols: S.molecules, title: S.name, zipName: S.name + '_inputs', cite: citeText });
+
   $('#dlzip').onclick = async e => {
     const btn = e.currentTarget, label = btn.textContent;
     btn.disabled = true;
@@ -238,9 +245,7 @@
       for (let i = 0; i < files.length; i += 16) {
         await Promise.all(files.slice(i, i + 16).map(async f => { dir.file(f + '.xyz', await loadXYZ(f)); btn.textContent = `Preparing… ${++done}/${files.length}`; }));
       }
-      dir.file('CITATION.txt', `ASCDB group ${S.name} (${S.dbTitle})\n\nPlease cite the original work(s):\n` +
-        S.refs.map(r => `- ${r.text}\n  ${r.url}`).join('\n') +
-        `\n\nand the ASCDB database:\n- Morgante, P.; Peverati, R. Phys. Chem. Chem. Phys. 2019, 21, 19092-19103.\n  https://doi.org/10.1039/C9CP03211H\n\nThe second line of each xyz file holds "charge multiplicity".\n`);
+      dir.file('CITATION.txt', citeText + `\nThe second line of each xyz file holds "charge multiplicity".\n`);
       download(S.name + '_structures.zip', await zip.generateAsync({ type: 'blob', compression: 'DEFLATE' }));
     } catch (err) { alert('Could not build the archive: ' + err.message); }
     btn.textContent = label; btn.disabled = false;
