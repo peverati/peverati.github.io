@@ -21,16 +21,15 @@ header:
 - Dr. Roberto Peverati - [about](/About/)
 
 ## Graduate Students: 
-- Coty Deluca - Ph.D. student [email](mailto:cdeluca2019@my.fit.edu)
-- Tegla Jones - Ph.D. student [email](mailto:tjones2018@my.fit.edu)
-- Antonella Ambrosini - M.S. student [email](aambrosini2021@my.fit.edu)
+- Dorothea Illner - M.S. student [email](dillner2022@my.fit.edu)
 
 ## Undergraduate Students: 
-- Gregory Aldrich - [email](mailto:galdrich2018@my.fit.edu)
-- Gabe Silva - [email](mailto:jsilva2021@my.fit.edu)
 
 ## Alumni:
-- Pierpaolo Morgante - currently postdoc @ University of Buffalo [email](mailto:pmorgante2017@go.fit.edu)
+- Pierpaolo Morgante (Ph.D. 2022) - Currently Scientific Editor @ IOp Science [email](mailto:pmorgante2017@go.fit.edu)
+- Tegla Jones - Currently Ph.D. Student @ Tokyo Tech [email](mailto:tjones2018@my.fit.edu)
+
+
 
 # Machines:
 ## Group Cluster (Carbon):
