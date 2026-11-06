@@ -2,7 +2,7 @@
    Plain SVG, no libraries. Colours come from CSS variables (see style.css, "statistics"):
    one hue (--c-series) for single-series charts, blue/red (--c-neg / --c-pos) for the sign of an error. */
 const StatsUI = (() => {
-  let ctx, base = [], rows = [], sortKey = 'mue', sortDir = 1, scope = 'all', axisIdx = -1, statKey = 'mue';   // axisIdx -1: automatic axis range; statKey: statistic printed right of the violins
+  let ctx, base = [], rows = [], sortKey = 'mue', sortDir = 1, scope = 'all', scopeSet = false, axisIdx = -1, statKey = 'mue';   // axisIdx -1: automatic axis range; statKey: statistic printed right of the violins
   const STAT_NAMES = { mue: 'MUE', mse: 'MSE', rmse: 'RMSE', sd: 'SD', max: 'Max |error|' };
   const AXIS_OPTS = { kcal: [1, 2, 5, 10, 20], kj: [5, 10, 20, 50, 100], eh: [0.001, 0.002, 0.005, 0.01, 0.03], native: [0.1, 0.2, 0.5, 1, 2] };   // +- values offered per unit
   let modal, tip, current = null, order = [];
@@ -31,7 +31,7 @@ const StatsUI = (() => {
   function shown() {
     let list = base;
     const sel = base.filter(r => ctx.isSel(r.name));
-    if (scope === 'sel' && sel.length) list = sel;
+    if (scope === 'sel' && scopeSet && sel.length) list = sel;   // the table only narrows down when the reader asks for it; by default it stays complete so that more can be ticked
     const k = sortKey;
     return [...list].sort((a, b) => (k === 'name' ? a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }) : a[k] - b[k]) * sortDir || a.name.localeCompare(b.name));
   }
@@ -57,7 +57,7 @@ const StatsUI = (() => {
       const ax = e.target.closest('[data-axis]');
       if (ax) { axisIdx = +ax.dataset.axis; drawBars(); return; }
       const sc = e.target.closest('[data-scope]');
-      if (sc) { scope = sc.dataset.scope; refresh(); return; }
+      if (sc) { scope = sc.dataset.scope; scopeSet = true; refresh(); return; }
       const th = e.target.closest('th[data-k]');
       if (th) { const k = th.dataset.k; sortDir = sortKey === k ? -sortDir : 1; sortKey = k; refresh(); return; }
       const cb = e.target.closest('input[data-sel]');
@@ -76,6 +76,7 @@ const StatsUI = (() => {
   function refresh() {
     if (!ctx) return;
     const nsel = base.filter(r => ctx.isSel(r.name)).length;
+    if (!scopeSet) scope = nsel ? 'sel' : 'all';     // until the reader picks a view, show the selected functionals when there are any
     if (!nsel && scope === 'sel') scope = 'all';
     $$('#st-scope').innerHTML = `<button data-scope="all" class="${scope === 'all' ? 'on' : ''}">All ${noun()}s (${base.length})</button>` +
       (nsel ? `<button data-scope="sel" class="${scope === 'sel' ? 'on' : ''}">Selected (${nsel})</button>` : '');
@@ -101,11 +102,13 @@ const StatsUI = (() => {
   function drawBars() {
     $$('#st-stat').innerHTML = Object.entries(STAT_NAMES).map(([k, n]) => `<option value="${k}">${n} (${ctx.unitLabel()})</option>`).join('');
     $$('#st-stat').value = statKey;
-    const list = [...rows].sort((a, b) => a.mue - b.mue).slice(0, scope === 'sel' ? 25 : 20);
+    const key = r => Math.abs(r[statKey]);      // best first for the chosen statistic (for MSE: closest to zero)
+    const pool = scope === 'sel' ? base.filter(r => ctx.isSel(r.name)) : base;
+    const list = [...pool].sort((a, b) => key(a) - key(b) || a.name.localeCompare(b.name)).slice(0, scope === 'sel' ? 40 : 20);
     const opts = AXIS_OPTS[ctx.unit];
     $$('#st-axis').innerHTML = `<button data-axis="-1" class="${axisIdx < 0 ? 'on' : ''}" title="Follow the data, at most ±10 kcal/mol">Auto</button>` +
       opts.map((v, i) => `<button data-axis="${i}" class="${axisIdx === i ? 'on' : ''}">${v}</button>`).join('');
-    $$('#st-bartitle').textContent = `Distribution of the errors (${ctx.unitLabel()}), ${scope === 'sel' ? `selected ${noun()}s` : `${list.length} ${noun()}s with the lowest MUE`}, best first. Dot: median; bar: middle half of the errors; click a violin for details`;
+    $$('#st-bartitle').textContent = `Distribution of the errors (${ctx.unitLabel()}), ${scope === 'sel' ? `selected ${noun()}s` : `${list.length} ${noun()}s with the lowest ${statKey === 'mse' ? '|MSE|' : STAT_NAMES[statKey]}`}, best first. Dot: median; bar: middle half of the errors; click a violin for details`;
     const res = violins($$('#st-bars'), list.map(r => {
       const vals = ctx.FD[r.name].filter(v => v != null).map(v => v * f()).sort((a, b) => a - b);
       return { label: r.name, vals, click: r.name, r };

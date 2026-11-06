@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ACCDB subset</title>
-<link rel="stylesheet" href="assets/style.css?v=20251110">
+<link rel="stylesheet" href="assets/style.css?v=20251115">
 </head>
 <body>
 <div class="topbar"><div class="wrap">
@@ -20,10 +20,10 @@
 
 <script src="assets/3Dmol-min.js"></script>
 <script src="assets/jszip.min.js"></script>
-<script src="assets/app.js?v=20251110"></script>
-<script src="assets/fnpicker.js?v=20251110"></script>
-<script src="assets/stats.js?v=20251110"></script>
-<script src="assets/inputs.js?v=20251110"></script>
+<script src="assets/app.js?v=20251115"></script>
+<script src="assets/fnpicker.js?v=20251115"></script>
+<script src="assets/stats.js?v=20251115"></script>
+<script src="assets/inputs.js?v=20251115"></script>
 <script>
 (async function () {
   const id = new URLSearchParams(location.search).get('id');
@@ -39,7 +39,7 @@
   const UNITS = NATIVE ? { native: [(S.unit || {}).label || '', (S.unit || {}).decimals || 4] } : { kcal: ['kcal/mol', 2], kj: ['kJ/mol', 2], eh: ['Hartree (Eh)', 6] };
   if (NATIVE) S.reactions.forEach(r => { r.ref.native = r.ref.value; });
   let unit = NATIVE ? 'native' : 'kcal', page = 0, filter = '';
-  const PAGE = 100;
+  const PAGE = 50;
 
   const molBtn = n => {
     const m = /^(\d+_)?(.*)$/.exec(n);
@@ -74,6 +74,7 @@
         <button class="btn primary" id="dlzip">Download structures (.zip)</button>
         <button class="btn" id="dlinp">Download input files…</button>
       </div>
+      <p class="statnote jump" id="statjump" hidden>Scroll down to the bottom of the page, or <a href="#statsec">jump there</a>, for the overall statistics of the exchange-correlation functionals on this subset.</p>
     </section>
     <div class="tabs" role="tablist">
       <button class="tab" role="tab" id="t-r" aria-selected="true">${S.property ? 'Values' : 'Reactions'}</button>
@@ -203,6 +204,7 @@
     });
     $('#dlfn').hidden = !sel.length;
     renderRows();
+    $('#statjump').hidden = false;
     StatsUI.mount({
       S, FD, get unit() { return unit; }, noun: S.fnLabel ? S.fnLabel.toLowerCase().replace(/s$/, '') : undefined,
       factor: () => FACTOR[unit], decs, unitLabel: () => UNITS[unit][0],
