@@ -18,6 +18,9 @@ The textbook for the physical chemistry 1 course is available [HERE](https://pev
 ## P-Chem 2 (CHM 3002):
 The textbook for the physical chemistry 2 course is available [HERE](https://peverati.github.io/pchem2)
 
+## Advanced Physical Chemistry (CHM 5111):
+The computational lab website, with the ten experiments and the lecture notes, is available [HERE](https://peverati.github.io/advpchem)
+
 ## Contacts
 My office is #334 in the Olin Physical Science Building (OPS)
 (Located next to our Lab in OPS 333)
